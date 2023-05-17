@@ -11,3 +11,9 @@ class Socio(models.Model):
     apellido = models.CharField(max_length= 30)
     fecha_nacimiento = models.DateField()
     activo = models.BooleanField(default= True)
+
+    def __str__(self):
+        return F"{self.apellido} {self.nombre}"
+    
+    class Meta:
+        ordering = ['apellido', 'nombre', ]

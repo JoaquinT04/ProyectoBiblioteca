@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #Apps Propias
     'biblioteca',
+    'autor',
+    'socio',
 ]
 
 MIDDLEWARE = [

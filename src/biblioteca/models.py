@@ -3,7 +3,6 @@ from socio.models import Socio
 from empleado.models import Empleado
 from libro.models import Libro
 
-# Create your models here.
 class PrestamoLibro(models.Model):
     fecha_prestamos: models.DateField(auto_now_add=True)
     fecha_devolucion: models.DateField()

@@ -4,6 +4,13 @@ from empleado.models import Empleado
 from libro.models import Libro
 
 # Create your models here.
+
+# El modelo PrestamoLibro llevara el registro de los libros prestados:
+# fecha_prestado: Fecha que se presta. Se genera automaticamente.
+# fecha_devolucion: Fecha de decolucion. Se debe cargar obligatoriamente.
+# socio: Es la persona a quie se prestara el libro.
+# empleado: Es la persona responsable del prestamo.
+# libro: Libro que se presta.
 class PrestamoLibro(models.Model):
     fecha_prestamos: models.DateField(auto_now_add= True)
     fecha_devolucion: models.DateField()

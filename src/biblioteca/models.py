@@ -12,11 +12,11 @@ from libro.models import Libro
 # empleado: Es la persona responsable del prestamo.
 # libro: Libro que se presta.
 class PrestamoLibro(models.Model):
-    fecha_prestamos: models.DateField(auto_now_add= True)
-    fecha_devolucion: models.DateField()
-    socio: models.ForeignKey(Socio, on_delete= CASCADE)
-    empleado: models.ForeignKey(Empleado, on_delete= CASCADE)
-    libro: models.ForeignKey(Libro, on_delete= CASCADE)
+    fecha_prestamos = models.DateField(auto_now_add= True)
+    fecha_devolucion = models.DateField()
+    socio = models.ForeignKey(Socio, on_delete= models.CASCADE)
+    empleado = models.ForeignKey(Empleado, on_delete= models.CASCADE)
+    libro = models.ForeignKey(Libro, on_delete= models.CASCADE)
 
     def __str__(self):
         cadena = f'Prestado Dia: {self.fecha_prestamos} - Devolucion Dia: {self.fecha_devolucion}\n'

@@ -1,2 +1,5 @@
 # ProyectoBiblioteca
-Esta es la comisión 1 el squad 2 del bootcamp Alkemy
+
+Python - Django
+Comisión 1. Squad 2. Bootcamp Alkemy
+

@@ -5,7 +5,7 @@ from .models import Autor
 
 
 class AutorAdmin(admin.ModelAdmin):
-    """ Se define el atributo list_display 
+    """ Se define el atributo list_display para listar los autores
         Se Agrega opciones de búsqueda por nombre o apellido (list_search = search_fields)
         Se agrega la opción de filtrado por el field activo y nacionalidad (list_filter) """
     

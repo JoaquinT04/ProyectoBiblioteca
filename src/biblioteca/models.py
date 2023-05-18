@@ -3,8 +3,6 @@ from socio.models import Socio
 from empleado.models import Empleado
 from libro.models import Libro
 
-# Create your models here.
-
 # El modelo PrestamoLibro llevara el registro de los libros prestados:
 # fecha_prestado: Fecha que se presta. Se genera automaticamente.
 # fecha_devolucion: Fecha de decolucion. Se debe cargar obligatoriamente.

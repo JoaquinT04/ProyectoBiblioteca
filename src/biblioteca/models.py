@@ -5,12 +5,14 @@ from libro.models import Libro
 
 # Create your models here.
 class PrestamoLibro(models.Model):
-    fecha_prestamos: models.DateField(auto_now_add=True)
+    fecha_prestamos: models.DateField(auto_now_add= True)
     fecha_devolucion: models.DateField()
-    socio: models.ForeignKey(Socio, on_delete=CASCADE)
-    empleado: models.ForeignKey(Empleado, on_delete=CASCADE)
-    libro: models.ForeignKey(Libro, on_delete=CASCADE)
+    socio: models.ForeignKey(Socio, on_delete= CASCADE)
+    empleado: models.ForeignKey(Empleado, on_delete= CASCADE)
+    libro: models.ForeignKey(Libro, on_delete= CASCADE)
 
-#Generar el archivo migration (command makemigrations)
-
-#Aplicar el archivo migration (command migrate)
+    def __str__(self):
+        cadena = f'Prestado Dia: {self.fecha_prestamos} - Devolucion Dia: {self.fecha_devolucion}\n'
+        cadena += f'[Socio: {self.socio} - Libro: {self.libro}]\n'
+        cadena += f'"Empleado: {self.empleado}"'
+        return cadena

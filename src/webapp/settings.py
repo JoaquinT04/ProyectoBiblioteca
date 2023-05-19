@@ -70,11 +70,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.jinja2.Jinja2',
 
         'DIRS': [
-
-                'ruta de la carpeta donde se guardarán las plantillas para jinja2',
-
-                'ruta a otra carpeta con plantillas para Jinja2'
-
+            BASE_DIR / 'templates',
         ],
 
         'APP_DIRS': True,
@@ -100,7 +96,9 @@ TEMPLATES = [
 
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
 
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
 
         'APP_DIRS': True,
 

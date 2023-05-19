@@ -13,7 +13,9 @@
       </tr>
     </thead>
     <tbody>
-    {% for empleado in empleados %}
+      {% comment %} aqui empleados va a varirar dependiendo 
+      de como me pasen las lista desde la views {% endcomment %}
+    {% for empleado in object_list %}
       <tr>
         <td>{{empleado.nombre}}</td>
         <td>{{empleado.apellido}}</td>

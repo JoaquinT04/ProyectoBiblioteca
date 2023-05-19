@@ -5,5 +5,5 @@ app_name = 'empleados'
 
 urlpatterns = [
     path('crear',CrearEmpleado.as_view(), name= 'CrearEmpleado' ),
-    path('listado',ListarEmpleados.as_view(), name= 'ListarEmpleados' ),
+    path('listar',ListarEmpleados.as_view(), name= 'ListarEmpleados' ),
 ]

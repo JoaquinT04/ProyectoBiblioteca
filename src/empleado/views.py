@@ -5,8 +5,10 @@ from .forms import EmpleadoForm
 # Create your views here.
 
 class ListarEmpleados(ListView):
-	pass
+	model = Empleado
+	template_name = "empleados/listar.html"
 class CrearEmpleado(CreateView):
 	model = Empleado
 	form_class = EmpleadoForm
 	template_name = "empleados/crear.html"
+

@@ -14,10 +14,10 @@ class Libro(models.Model):
     activo: models.BooleanField(default=True)
 
     def __str__(self) -> str:
-      return f"""titulo: {this.titulo}
-                 descripcion: {this.descripcion}
-                 isbn: {this.isbn}
-                 autor: {this.autor}
+      return f"""titulo: {self.titulo}
+                 descripcion: {self.descripcion}
+                 isbn: {self.isbn}
+                 autor: {self.autor}
                  """
     class Meta:
       ordering = [

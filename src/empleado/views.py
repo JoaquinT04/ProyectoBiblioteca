@@ -1,9 +1,12 @@
 from django.shortcuts import render
-from django.views.generic import CreateView,ListView
 from .models import Empleado
 from .forms import EmpleadoForm
-# Create your views here.
+from django.views.generic import UpdateView, ListView,CreateView
 
+class EditarEmpleados(UpdateView):
+    model = Empleado
+    form_class = EmpleadoForm
+    template_name = "empleados/editar.html"
 class ListarEmpleados(ListView):
 	model = Empleado
 	template_name = "empleados/listar.html"

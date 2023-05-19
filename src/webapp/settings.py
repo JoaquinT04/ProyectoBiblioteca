@@ -81,16 +81,6 @@ TEMPLATES = [
             'autoescape': True
         },
     },
-    {
-        'BACKEND': 'django.template.backends.jinja2.Jinja2',
-        'DIRS': ["templates"],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'environment': 'webapp.jinja2.ini_jinja2',
-            'auto_reload': DEBUG,
-            'autoescape': True
-        },
-    },
 ]
 
 WSGI_APPLICATION = 'webapp.wsgi.application'
@@ -129,11 +119,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'es-arg'
+LANGUAGE_CODE = 'es-ar'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Argentina/Buenos_Aires'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 

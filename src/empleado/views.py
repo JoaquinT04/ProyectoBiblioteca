@@ -24,3 +24,15 @@ def activar_empleado(request, pk):
     empleado.activo = True
     mensaje = "Empleado Activado"
     return mensaje
+
+def desactivar_empleado(request, id):
+    empleado = get_object_or_404(Empleado, id=id)
+    empleado.activo = False
+    empleado.save()
+    
+    mensaje = f'Empleado: {empleado.apellido}, {empleado.nombre}\n'
+    mensaje += f'Legajo: {empleado.numero_legajo}\n'
+    mensaje += f'DESACTIVADO con exito!!'
+
+    return mensaje
+

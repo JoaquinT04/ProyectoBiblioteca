@@ -81,6 +81,16 @@ TEMPLATES = [
             'autoescape': True
         },
     },
+    {
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',
+        'DIRS': ["templates"],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'environment': 'webapp.jinja2.ini_jinja2',
+            'auto_reload': DEBUG,
+            'autoescape': True
+        },
+    },
 ]
 
 WSGI_APPLICATION = 'webapp.wsgi.application'

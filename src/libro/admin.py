@@ -2,8 +2,6 @@ from django.contrib import admin
 from .models import Libro
 
 # Register your models here.
-
-
 class LibroAdmin(admin.ModelAdmin):
 	# me mostrara una tabla que se separaran de la siguiente forma
 	# titulo | descripcion | isbn | autor | activo

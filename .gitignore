@@ -513,3 +513,7 @@ GitHub.sublime-settings
 !.vscode/launch.json
 !.vscode/extensions.json
 .history
+
+# Ignora todo __pycache__
+
+**/__pycache__/ 

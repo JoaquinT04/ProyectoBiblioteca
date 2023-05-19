@@ -2,6 +2,7 @@ from django.db import models
 from socio.models import Socio
 from empleado.models import Empleado
 from libro.models import Libro
+from datetime import datetime
 
 # El modelo PrestamoLibro llevara el registro de los libros prestados:
 # fecha_prestado: Fecha que se presta. Se genera automaticamente.

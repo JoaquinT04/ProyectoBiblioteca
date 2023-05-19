@@ -3,6 +3,7 @@ from socio.models import Socio
 from empleado.models import Empleado
 from libro.models import Libro
 from datetime import datetime
+from .models import PrestamoLibro
 
 # El modelo PrestamoLibro llevara el registro de los libros prestados:
 # fecha_prestado: Fecha que se presta. Se genera automaticamente.
@@ -11,11 +12,11 @@ from datetime import datetime
 # empleado: Es la persona responsable del prestamo.
 # libro: Libro que se presta.
 class PrestamoLibro(models.Model):
-    fecha_prestamos: models.DateField(auto_now_add= True)
-    fecha_devolucion: models.DateField()
-    socio: models.ForeignKey(Socio, on_delete= models.CASCADE)
-    empleado: models.ForeignKey(Empleado, on_delete= models.CASCADE)
-    libro: models.ForeignKey(Libro, on_delete= models.CASCADE)
+    fecha_prestamos= models.DateField(auto_now_add= True)
+    fecha_devolucion= models.DateField()
+    socio= models.ForeignKey(Socio, on_delete= models.CASCADE)
+    empleado= models.ForeignKey(Empleado, on_delete= models.CASCADE)
+    libro= models.ForeignKey(Libro, on_delete= models.CASCADE)
 
     def __str__(self):
         cadena = f'Prestado Dia: {self.fecha_prestamos} - Devolucion Dia: {self.fecha_devolucion}\n'

@@ -17,7 +17,7 @@ class PrestamoLibro(models.Model):
     libro = models.ForeignKey(Libro, on_delete= models.CASCADE)
 
     def __str__(self):
-        cadena = f'Prestado Dia: {self.fecha_prestamos} - Devolucion Dia: {self.fecha_devolucion}\n'
+        cadena = f'Prestado Dia: {self.fecha_prestamos.strftime("%d/%m/%Y")} - Devolucion Dia: {self.fecha_devolucion.strftime("%d/%m/%Y")}\n'
         cadena += f'[Socio: {self.socio} - Libro: {self.libro}]\n'
         cadena += f'"Empleado: {self.empleado}"'
         return cadena

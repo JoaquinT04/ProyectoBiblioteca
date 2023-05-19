@@ -6,7 +6,7 @@ from .models import Empleado
 from .forms import EmpleadoForm
 from django.views.generic import UpdateView, ListView,CreateView
 
-class EditarEmpleados(UpdateView):
+class EditarEmpleado(UpdateView):
     model = Empleado
     form_class = EmpleadoForm
     template_name = "empleados/editar.html"

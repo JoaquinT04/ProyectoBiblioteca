@@ -11,8 +11,8 @@ from datetime import datetime
 # empleado: Es la persona responsable del prestamo.
 # libro: Libro que se presta.
 class PrestamoLibro(models.Model):
-    fecha_prestamos = models.DateField(auto_now_add= True)
-    fecha_devolucion = models.DateField()
+    fecha_prestamos = models.DateTimeField(default = datetime.now())
+    fecha_devolucion = models.DateTimeField(default = datetime.now())
     socio = models.ForeignKey(Socio, on_delete= models.CASCADE)
     empleado = models.ForeignKey(Empleado, on_delete= models.CASCADE)
     libro = models.ForeignKey(Libro, on_delete= models.CASCADE)

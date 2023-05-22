@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (
     EditarAutor,
-    activar_autor
+    activar_autor,
     )
 
 app_name = 'autores'

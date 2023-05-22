@@ -1,0 +1,3 @@
+
+class SocioForm():
+	pass

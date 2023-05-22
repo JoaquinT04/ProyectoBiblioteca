@@ -1,5 +1,3 @@
-from typing import Any, Dict
-from django import http
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from .models import Empleado
@@ -10,17 +8,18 @@ class EditarEmpleado(UpdateView):
     model = Empleado
     form_class = EmpleadoForm
     template_name = "empleados/editar.html"
+
 class ListarEmpleados(ListView):
 	model = Empleado
 	template_name = "empleados/listar.html"
+
 class CrearEmpleado(CreateView):
 	model = Empleado
 	form_class = EmpleadoForm
 	template_name = "empleados/crear.html"
 
-# Create your views here.
 def activar_empleado(request, pk):
-    empleado= get_object_or_404(pk = pk)
+    empleado= get_object_or_404(Empleado, pk = pk)
     empleado.activo = True
     mensaje = "Empleado Activado"
     return mensaje

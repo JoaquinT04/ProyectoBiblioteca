@@ -2,10 +2,18 @@
 
 {% block contenido %}
 <div class="container">
-    <form method="POST" action="">
-        {% csrf_token %}
-        {{form.as_p}}
-        <button class="btn btn-primary" type="submit">Guardar</button>
-    </form>
+    <div class="text-center">
+        <h3 class="title">Modificar Empleado</h3>
+    </div>
+    <div class="container">
+        <form class="align-center" method="POST" action="">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button class="btn btn-primary" type="submit">Guardar</button>
+        </form>
+    </div>
+    <div class="container text-end">
+        <a class="btn btn-primary" href= {% url 'empleados:ListarEmpleados' %}>Volver al listado</a>
+    </div>
 </div>
 {% endblock contenido %}

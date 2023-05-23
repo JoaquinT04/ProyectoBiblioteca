@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404 , redirect
 from .models import Empleado
 from .forms import EmpleadoForm
 from django.views.generic import UpdateView, ListView,CreateView
@@ -26,17 +26,19 @@ def activar_empleado(request, id):
     empleado= get_object_or_404(Empleado, id = id)
     empleado.activo = True
     empleado.save()
-    mensaje = "Empleado Activado"
-    return mensaje
+    #mensaje = "Empleado Activado"
+    #return mensaje
+    return redirect(reverse_lazy('empleados:ListarEmpleados'))
 
 def desactivar_empleado(request, id):
     empleado = get_object_or_404(Empleado, id=id)
     empleado.activo = False
     empleado.save()
     
-    mensaje = f'Empleado: {empleado.apellido}, {empleado.nombre}\n'
-    mensaje += f'Legajo: {empleado.numero_legajo}\n'
-    mensaje += f'DESACTIVADO con exito!!'
+    #mensaje = f'Empleado: {empleado.apellido}, {empleado.nombre}\n'
+    #mensaje += f'Legajo: {empleado.numero_legajo}\n'
+    #mensaje += f'DESACTIVADO con exito!!'
 
-    return mensaje
+    #return mensaje
+    return redirect(reverse_lazy('empleados:ListarEmpleados'))
 

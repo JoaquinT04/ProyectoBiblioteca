@@ -3,7 +3,7 @@
 {% block contenido %}
 <div class="container">
   <div class="text-center">
-    <h3 class="title">Lista de Autores</h3>
+    <h3 class="title">Lista de Socios</h3>
   </div>
   <table class="table">
     <thead>
@@ -19,8 +19,7 @@
       <tr>
         <td>{{socio.nombre}}</td>
         <td>{{socio.apellido}}</td>
-        <td>{{socio.dni}}</td>
-        <td>{{socio.mail}}</td>
+        <td>{{socio.fecha_nacimiento}}</td>
         <td>
           {% if socio.activo %}
           Activo

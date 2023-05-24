@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+		<th scope="col">NOMBRE</th>
+        <th scope="col">APELLIDO</th>
+        <th scope="col">NACIONALIDAD</th>
+        <th scope="col">ACTIVO</th>
+		<a href=””>EDITAR</a>
+        <a href=””>BORRAR</a>
+      </tr>
+    </thead>
+    <tbody>
+      {% comment %} aqui autores va a varirar dependiendo 
+      de como me pasen las lista desde la views {% endcomment %}
+    {% for autor in object_list %}
+      <tr>
+        <td>{{autor.nombre}}</td>
+        <td>{{autor.apellido}}</td>
+        <td>{{autor.nacionalidad}}</td>
+        <td>{{autor.activo}}</td>
+			</tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock contenido %}

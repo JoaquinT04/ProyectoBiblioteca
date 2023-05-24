@@ -12,6 +12,10 @@ class Socio(models.Model):
     fecha_nacimiento = models.DateField()
     activo = models.BooleanField(default= True)
 
+    def get_absolute_url(self):
+        return reverse("socios:EditarSocio", kwargs={"pk": self.pk})
+    
+
     def __str__(self):
         return F"{self.apellido} {self.nombre}"
     

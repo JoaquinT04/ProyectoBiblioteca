@@ -107,7 +107,7 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
 
 - **Joaquin Tejerina**      
     - :octocat:[GitHub](https://github.com/JoaquinT04/).
-    - :e-mail: 
+    - :e-mail: Mail: joaquintejerina19@hotmail.com
     - [LinkedIn](https://www.linkedin.com/in/joaquin-tejerina/).
 - **Ramiro Lopez**                
     - :octocat:[GitHub](https://github.com/razier31/).
@@ -115,10 +115,13 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
     - [LinkedIn](https://www.linkedin.com/in/ramiro-lopez-17020026a/).
 - **Dante Alberto Martinez**      
     - :octocat:[GitHub](https://github.com/errorcode106/).
-    - :e-mail:
+    - :e-mail: Mail: dantealbertomartinez@gmail.com
+    - [LinkedIn](https://www.linkedin.com/in/dante-alberto-martinez-82b291262).
 - **Gabriel Alejandro Plaza**      
     - :octocat:[GitHub](https://github.com/GabrielP95/).
-    - :e-mail:
+    - :e-mail: Mail: plazagabriel1995@gmail.com
+    - porfolio: https://gabrielp95.github.io/  
 - **Sergio Armando Salvatierra**     
     - :octocat:[GitHub](https://github.com/xalvlax/).
-    - :e-mail:
+    - :e-mail: Mail: sergiosalvatierra86@gmail.com
+    - [LinkedIn](https://www.linkedin.com/in/sergio-a-salvatierra/).

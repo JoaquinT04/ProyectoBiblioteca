@@ -22,9 +22,9 @@
                   Personas
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Empleados</a></li>
+                  <li><a class="dropdown-item" href="{% url 'empleados:ListarEmpleados' %}">Empleados</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Socios</a></li>
+                  <li><a class="dropdown-item" href="{% url 'socios:ListarSocios' %}">Socios</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -34,7 +34,7 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Ver Libros</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Ver Autores</a></li>
+                  <li><a class="dropdown-item" href="{% url 'autores:ListarAutores' %}">Ver Autores</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Ver Prestamos</a></li>
                 </ul>

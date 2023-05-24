@@ -106,8 +106,19 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
 ## Autores y Colaboradores
 
 - Joaquin Tejerina :+1:      
-    - [GitHub](https://github.com/JoaquinT04/).
+    - :octocat:[GitHub](https://github.com/JoaquinT04/).
+    - :e-mail: 
+    - [LinkedIn](https://www.linkedin.com/in/joaquin-tejerina/).
 - Ramiro Lopez                
-    - [GitHub](https://github.com/razier31/).
+    - :octocat:[GitHub](https://github.com/razier31/).
+    - :e-mail: Mail: ra31lopez@gmail.com
+    - [LinkedIn](https://www.linkedin.com/in/ramiro-lopez-17020026a/).
 - Dante Alberto Martinez      
-    - [GitHub](https://github.com/errorcode106/).
+    - :octocat:[GitHub](https://github.com/errorcode106/).
+    - :e-mail:
+- Gabriel Alejandro Plaza      
+    - :octocat:[GitHub](https://github.com/GabrielP95/).
+    - :e-mail:
+- Sergio Armando Salvatierra     
+    - :octocat:[GitHub](https://github.com/xalvlax/).
+    - :e-mail:

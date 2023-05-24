@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<div class="container">
+  <div class="text-center">
+    <h3 class="title">Lista de Socios</h3>
+  </div>
+  <table class="table">
+    <thead>
+      <tr class="bg-dark text-white">
+		<th scope="col">NOMBRE</th>
+        <th scope="col">APELLIDO</th>
+        <th scope="col">FECHA DE NACIMIENTO</th>
+        <th scope="col">ESTADO</th>				
+      </tr>
+    </thead>
+    <tbody>     
+    {% for socio in object_list %}
+      <tr>
+        <td>{{socio.nombre}}</td>
+        <td>{{socio.apellido}}</td>
+        <td>{{socio.fecha_nacimiento}}</td>
+        <td>
+          {% if socio.activo %}
+          Activo
+          {% else %}
+          Inactivo
+          {% endif %}
+        </td>
+			</tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock contenido %}

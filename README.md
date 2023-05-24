@@ -83,27 +83,31 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
     - views.py ( Funcionalidades desactivar socio )
         - desactivar_socio ( funcion que cambia el campo Activo a False )
         
-### Visual       
-    Algunas Screenshots de nuestros templates Aqui
-    - HOME
-    - SOCIOS
-    - PRESTAMO LIBRO
-    - LISTADOS
-    - ETC
+## Visual       
+   
+ Algunas Screenshots de nuestros templates Aqui
+- HOME
+- SOCIOS
+ - PRESTAMO LIBRO
+- LISTADOS
+- ETC
 
-### Instalacion
+## Instalacion
 
-    REQUERIMIENTOS:
-        - asgiref 3.6.0
-        - Django 4.2.1
-        - Jinja2 3.1.2
-        - MarkupSafe 2.1.2
-        - Pillow 9.5.0
-        - sqlparse 0.4.4
-        - tzdata 2023.3
+ REQUERIMIENTOS:
+- asgiref 3.6.0
+- Django 4.2.1
+- Jinja2 3.1.2
+- MarkupSafe 2.1.2
+- Pillow 9.5.0
+- sqlparse 0.4.4
+- tzdata 2023.3
 
-### Autores y Colaboradores
+## Autores y Colaboradores
 
-    Joaquin Tejerina :+1:       [GitHub](https://github.com/JoaquinT04/).
-    Ramiro Lopez                [GitHub](https://github.com/razier31/).
-    Dante Alberto Martinez      [GitHub](https://github.com/errorcode106/).
+- Joaquin Tejerina :+1:      
+    - [GitHub](https://github.com/JoaquinT04/).
+- Ramiro Lopez                
+    - [GitHub](https://github.com/razier31/).
+- Dante Alberto Martinez      
+    - [GitHub](https://github.com/errorcode106/).

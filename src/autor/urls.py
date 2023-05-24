@@ -7,6 +7,6 @@ from .views import (
 app_name = 'autores'
 
 urlpatterns = [
-    path('listar/',ListarAutores.as_view(), name='EditarAutor'),
+    path('listar/',ListarAutores.as_view(), name='ListarAutores'),
     path('modificar/<int:pk>/',EditarAutor.as_view(), name='EditarAutor'),  
 ]

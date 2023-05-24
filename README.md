@@ -10,9 +10,9 @@ funcionalidades a una biblioteca, la cual permitirá a sus usuarios consultar el
 catálogo de libros, y un listado de los préstamos de libros realizados a sus
 socios. Cuenta con endpoint con devoluciones de datos en JSON
 
-### Modulos
+## Modulos
 
-- autor
+- **autor**
     - admin.py ( Administrador)
         - Agregado modelo al administrador utilizando list_display ( campos: nombre, apellido, nacionalidad y activo )
         - list_filter ( campos: activo y nacionalidad )
@@ -29,7 +29,7 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
         - activar_autor ( funcion que cambia Activo a True)
         - desactivar_autor ( funcion que cambia Activo a False)
 
-- biblioteca
+- **biblioteca**
     - admin.py ( Administrador)
         - Agregado modelo al administrador utilizando list_display ( campos: fecha_prestamos, fecha_devolucion, socio, empleado y libro )
         - ordering ( fecha_devolucion )
@@ -42,7 +42,7 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
         - libro ( Datos del libro Prestado / ForeignKey de modelo libro )
     - views.py ( )
 
-- empleado
+- **empleado**
     - admin.py ( Administrador)
         - Agregado modelo al administrador utilizando list_display ( campos: apellido, nombre, numero_legajo y activo )
         - list_filter ( campos: activo )
@@ -58,7 +58,7 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
         - EditarEmpleado ( Utiliza su formulario ***forms.py*** para editar un Empleado / uso Generic Views )
         - activar_empleado ( funcion que cambia Activo a True )
         - desactivar_empleado ( funcion que cambia Activo a False )
-- libro
+- **libro**
     - admin.py ( Administrador)
         - Agregado modelo al administrador utilizando list_display ( campos: titulo, descripcion, isbn, autor y activo )
         - list_filter ( campos: activo )
@@ -70,7 +70,7 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
         - autor ( La persona que escribio el libro / ForeignKey de modelo autor)
         - activo ( El libro esta disponible o no. Por default se crea en True)
     - views.py ()
-- socio
+- **socio**
     - admin.py ( Administrador)
         - Agregado modelo al administrador utilizando list_display ( campos: nombre, apellido, fecha_nacimiento y activo )
         - list_filter ( campos: activo )
@@ -105,20 +105,20 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
 
 ## Autores y Colaboradores
 
-- Joaquin Tejerina :+1:      
+- **Joaquin Tejerina**      
     - :octocat:[GitHub](https://github.com/JoaquinT04/).
     - :e-mail: 
     - [LinkedIn](https://www.linkedin.com/in/joaquin-tejerina/).
-- Ramiro Lopez                
+- **Ramiro Lopez**                
     - :octocat:[GitHub](https://github.com/razier31/).
     - :e-mail: Mail: ra31lopez@gmail.com
     - [LinkedIn](https://www.linkedin.com/in/ramiro-lopez-17020026a/).
-- Dante Alberto Martinez      
+- **Dante Alberto Martinez**      
     - :octocat:[GitHub](https://github.com/errorcode106/).
     - :e-mail:
-- Gabriel Alejandro Plaza      
+- **Gabriel Alejandro Plaza**      
     - :octocat:[GitHub](https://github.com/GabrielP95/).
     - :e-mail:
-- Sergio Armando Salvatierra     
+- **Sergio Armando Salvatierra**     
     - :octocat:[GitHub](https://github.com/xalvlax/).
     - :e-mail:

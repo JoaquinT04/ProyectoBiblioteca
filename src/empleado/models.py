@@ -20,9 +20,5 @@ class Empleado(models.Model):
                    activo: {self.activo}"""
 
     def get_absolute_url(self):
-<<<<<<< HEAD
         return reverse("empleados:ListarEmpleados")
     
-=======
-        return reverse("empleado-detail", kwargs={"pk": self.pk})
->>>>>>> martinez

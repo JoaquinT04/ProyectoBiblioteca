@@ -5,3 +5,4 @@ class SocioForm(ModelForm):
 		class Meta:
 				model = Socio
 				fields = ['nombre', 'apellido', 'fecha_nacimiento']
+		

@@ -4,4 +4,4 @@ from .models import Autor
 class AutorForm(ModelForm):
 		class Meta:
 				model = Autor
-				fields = '__all__'
+				fields = ["nombre","apellido","nacionalidad"]

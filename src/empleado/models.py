@@ -10,7 +10,7 @@ class Empleado(models.Model):
     numero_legajo = models.PositiveIntegerField()
     activo = models.BooleanField(default=True)
 
-    class Meta():
+    class Meta:
         ordering = ["apellido","nombre"]
     
     def __str__(self):

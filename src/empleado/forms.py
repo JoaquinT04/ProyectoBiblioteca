@@ -12,4 +12,4 @@ from .models import Empleado
 class EmpleadoForm(ModelForm):
 		class Meta:
 				model = Empleado
-				fields = '__all__'
+				fields = ["nombre","apellido","numero_legajo "]

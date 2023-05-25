@@ -12,7 +12,9 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
 
 ## Modulos
 
-- **autor**
+<details><summary>Autor</summary>
+
+- **Contenido**
     - admin.py ( Administrador)
         - Agregado modelo al administrador utilizando list_display ( campos: nombre, apellido, nacionalidad y activo )
         - list_filter ( campos: activo y nacionalidad )
@@ -28,8 +30,11 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
         - EditarAutor ( Utiliza su formulario ***forms.py*** para editar un Autor / uso Generic Views )
         - activar_autor ( funcion que cambia Activo a True)
         - desactivar_autor ( funcion que cambia Activo a False)
+</details>
 
-- **biblioteca**
+<details><summary>Biblioteca</summary>
+
+- **Contenido**
     - admin.py ( Administrador)
         - Agregado modelo al administrador utilizando list_display ( campos: fecha_prestamos, fecha_devolucion, socio, empleado y libro )
         - ordering ( fecha_devolucion )
@@ -41,8 +46,11 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
         - empleado ( La persona encargada del prestamo del libro / ForeignKey de modelo empleado)
         - libro ( Datos del libro Prestado / ForeignKey de modelo libro )
     - views.py ( )
+</details>
 
-- **empleado**
+<details><summary>Empleado</summary>
+
+- **Contenido**
     - admin.py ( Administrador)
         - Agregado modelo al administrador utilizando list_display ( campos: apellido, nombre, numero_legajo y activo )
         - list_filter ( campos: activo )
@@ -58,7 +66,11 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
         - EditarEmpleado ( Utiliza su formulario ***forms.py*** para editar un Empleado / uso Generic Views )
         - activar_empleado ( funcion que cambia Activo a True )
         - desactivar_empleado ( funcion que cambia Activo a False )
-- **libro**
+</details>
+
+<details><summary>Libro</summary>
+
+- **Contenido**
     - admin.py ( Administrador)
         - Agregado modelo al administrador utilizando list_display ( campos: titulo, descripcion, isbn, autor y activo )
         - list_filter ( campos: activo )
@@ -70,7 +82,11 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
         - autor ( La persona que escribio el libro / ForeignKey de modelo autor)
         - activo ( El libro esta disponible o no. Por default se crea en True)
     - views.py ()
-- **socio**
+</details>
+
+<details><summary>Socio</summary>
+
+- **Contenido**
     - admin.py ( Administrador)
         - Agregado modelo al administrador utilizando list_display ( campos: nombre, apellido, fecha_nacimiento y activo )
         - list_filter ( campos: activo )
@@ -82,6 +98,7 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
         - activo ( Si es un socio dado de alta o no. Por default se crea en True)
     - views.py ( Funcionalidades desactivar socio )
         - desactivar_socio ( funcion que cambia el campo Activo a False )
+</details>        
         
 ## Visual       
    

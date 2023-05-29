@@ -1,9 +1,9 @@
-from django.forms import ModelForm
+from django import forms
 from .models import Empleado
 from .validators import nombreValidator
-class EmpleadoForm(ModelForm):
+class EmpleadoForm(forms.ModelForm):
 		nombre  = forms.CharField(min_length=3,max_length=50, validators=[nombreValidator])
 		apellido = forms.CharField(min_length=3,max_length=50, validators=[nombreValidator])
 		class Meta:
 				model = Empleado
-				fields = ["nombre","apellido","numero_legajo"]
+				fields = ["apellido","nombre","numero_legajo"]

@@ -7,13 +7,13 @@ from django.urls import reverse_lazy
 class EditarEmpleado(UpdateView):
     model = Empleado
     form_class = EmpleadoForm
-    template_name = 'empleados/editar.html' 
-    success_url = reverse_lazy('empleados:ListarEmpleados')  
+    template_name = "empleados/editar.html"
+    success_url = reverse_lazy("empleados:ListarEmpleados")  
 
 class ListarEmpleados(ListView):
     model = Empleado
     template_name = "empleados/listar.html"
-    ordering = 'pk'
+    ordering = ("-activo", "apellido", "nombre")
         
 class CrearEmpleado(CreateView):
     model = Empleado

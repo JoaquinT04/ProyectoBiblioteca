@@ -96,8 +96,12 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
         - apellido ( Apellido del Socio )
         - fecha_nacimiento ( Fecha de Nacimiento del Socio )
         - activo ( Si es un socio dado de alta o no. Por default se crea en True)
-    - views.py ( Funcionalidades desactivar socio )
-        - desactivar_socio ( funcion que cambia el campo Activo a False )
+    - views.py ( Funcionalidades CRUD, activar o desactivar socio )
+        - CrearSocio ( Utiliza su  - formulario ***forms.py*** para crear un Socio / uso Generic Views)
+        - ListarSocio ( Funcion que utiliza un template para mostrar la lista / uso Generic Views )
+        - EditarSocio ( Utiliza su formulario ***forms.py*** para editar un Socio / uso Generic Views )
+        - activar_socio ( funcion que cambia Activo a True )
+        - desactivar_socio ( funcion que cambia Activo a False )
 </details>        
         
 ## Visual       

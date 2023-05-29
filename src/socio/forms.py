@@ -1,7 +1,7 @@
 from django.forms import ModelForm
 from .models import Socio
 from django import forms
-
+from .validators import nombreValidator
 
 class SocioForm(ModelForm):
 		nombre  = forms.CharField(min_length=3,max_length=50, validators=[nombreValidator])

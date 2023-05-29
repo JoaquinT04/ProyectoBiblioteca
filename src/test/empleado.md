@@ -61,6 +61,7 @@ ACLARACION: En este campo se podria colocar un validador para acortar rango de l
 Se cargan legajos repetidos.
 
 ![Imagen](assets/images/empleado/carga09.jpg)
+
 Se soluciona en el modelo de empleado agregando unique=True.
 
 ![Imagen](assets/images/empleado/carga10.jpg)

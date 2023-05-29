@@ -9,3 +9,8 @@ class EditarLibro(UpdateView):
     form_class = LibroForm
     template_name = 'libros/editar.html' 
     success_url = reverse_lazy('libros:ListarLibros') 
+
+class ListarLibro(ListView):
+    model = Libro
+    template_name = 'libros/listar.html'
+    ordering = 'titulo'

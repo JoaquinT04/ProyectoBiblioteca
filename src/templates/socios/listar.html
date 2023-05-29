@@ -8,8 +8,8 @@
   <table class="table">
     <thead>
       <tr class="bg-dark text-white">
-        <th scope="col">NOMBRE</th>
         <th scope="col">APELLIDO</th>
+        <th scope="col">NOMBRE</th>
         <th scope="col">FECHA DE NACIMIENTO</th>
         <th scope="col">ESTADO</th>				
         <th scope="col">Modificar</th>				
@@ -19,8 +19,8 @@
     <tbody>     
     {% for socio in object_list %}
       <tr>
-        <td>{{socio.nombre}}</td>
         <td>{{socio.apellido}}</td>
+        <td>{{socio.nombre}}</td>
         <td>{{socio.fecha_nacimiento}}</td>
         <td>
           {% if socio.activo %}

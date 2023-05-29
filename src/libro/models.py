@@ -6,7 +6,7 @@ class Libro(models.Model):
     titulo = models.CharField(max_length=30)
     # descripción del libro (cabe la posibilidad de no tener descripcion) y tambien se acepta no poner descripcion 
     descripcion = models.TextField(blank=True,null=True)
-    # isbn del libro (El isbn es un estandard número de 13 cifras que identifica a cada libro en el mundo)
+    # isbn del libro (El isbn es un estandard número de 13 cifras** que identifica a cada libro en el mundo)
     isbn = models.PositiveIntegerField()
     # aqui estara la información del autor que se encuentra en su respectivo modelo
     autor =  models.ForeignKey(Autor, on_delete= models.CASCADE)

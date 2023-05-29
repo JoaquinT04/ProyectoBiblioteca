@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block titulo %}Listar Autores{% endblock titulo %}
 {% block contenido %}
 <div class="container">
     <div class="text-center">
@@ -7,8 +8,8 @@
     <table class="table">
         <thead>
             <tr class="bg-dark text-white">
-                <th scope="col">NOMBRE</th>
                 <th scope="col">APELLIDO</th>
+                <th scope="col">NOMBRE</th>
                 <th scope="col">NACIONALIDAD</th>
                 <th scope="col">ESTADO</th>
                 <th scope="col">MODIFICAR ESTADO</th>
@@ -18,8 +19,8 @@
         <tbody>
         {% for autor in object_list %}
         <tr>
-            <td>{{autor.nombre}}</td>
             <td>{{autor.apellido}}</td>
+            <td>{{autor.nombre}}</td>
             <td>{{autor.nacionalidad}}</td>
             <td>
             {% if autor.activo %}

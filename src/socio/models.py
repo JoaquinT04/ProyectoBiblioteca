@@ -1,5 +1,5 @@
 from django.db import models
-
+from .validators import nombreValidator
 """ Creacion de la entidad Socio cuenta con:
 nombre = nombre del Socio (tipo Str)
 apellido = apellido del Socio (tipo Str)
@@ -7,8 +7,8 @@ fecha_nacimiento = la fecha de nacimiento del Socio (tipo Date)
 activo = si el socio se encuentra activo o no (tipo Bool)
  """
 class Socio(models.Model):
-    nombre = models.CharField(max_length= 30)
-    apellido = models.CharField(max_length= 30)
+    nombre = models.CharField(max_length= 30,validators=[nombreValidator])
+    apellido = models.CharField(max_length= 30,validators=[nombreValidator])
     fecha_nacimiento = models.DateField()
     activo = models.BooleanField(default= True)
 
@@ -20,4 +20,4 @@ class Socio(models.Model):
         return F"{self.apellido} {self.nombre}"
     
     class Meta:
-        ordering = ['apellido', 'nombre', ]
+        ordering = ["apellido", "nombre","fecha_nacimiento"]

@@ -39,3 +39,4 @@ Ene el admin se puede crear un autor agregando valores al nombre, apellido, naci
 ### Modificar
 En el admin podemos modificar los atributod de nombre, apellido, nacionalidad y activo
 En el DB Browser se puede modificar pero no tiene ningun tipo de control
+

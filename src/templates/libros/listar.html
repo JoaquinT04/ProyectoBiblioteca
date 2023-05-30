@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block titulo %}Listado Libros{% endblock titulo %}
+{% block contenido %}
+<div class="container">
+  <div class="text-center">
+    <h3 class="title">Lista de Libros</h3>
+  </div>
+  <table class="table">
+    <thead>
+      <tr class="bg-dark text-white">
+        <th scope="col">TITULO</th>
+        <th scope="col">DESCRIPCION</th>
+        <th scope="col">ISBN</th>
+        <th scope="col">AUTOR</th>
+        <th scope="col">ESTADO</th>
+        <th scope="col">MODIFICAR ESTADO</th>
+        <th scope="col"></th>
+				{% comment %} podemos agregar la columna detalle
+				que al hacer click en una lupa vaya a la url (empleado/pk) {% endcomment %}
+      </tr>
+    </thead>
+    <tbody>
+      {% comment %} aqui empleados va a varirar dependiendo 
+      de como me pasen las lista desde la views {% endcomment %}
+    {% for libro in object_list %}
+      <tr>
+        <td>{{libro.titulo}}</td>
+        <td>{{libro.descripcion}}</td>
+        <td>{{libro.isbn}}</td>
+        <td>{{libro.autor}}</td>
+        <td>
+          {% if libro.activo %}
+          Activo
+          {% else %}
+          Inactivo
+          {% endif %}
+        </td>
+        <td>
+          {% if libro.activo %}
+          <a class="btn btn-danger btn-sm" href= ''>Desactivar</a>
+          {% else %}
+          <a class="btn btn-success btn-sm" href= ''>Activar</a>
+          {% endif %}
+        </td>
+        <td>
+          <a class="btn btn-dark btn-sm" href= ''>Editar</a>
+        </td>
+			</tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+<div class="container text-end">
+  <a class="btn btn-primary" href= ''>Agregar Libro</a>
+</div>
+{% endblock contenido %}

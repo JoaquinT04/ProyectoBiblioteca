@@ -1,5 +1,6 @@
 from django.forms import ModelForm
 from .models import Empleado
+from django import forms
 from .validators import nombreValidator
 from django import forms
 class EmpleadoForm(ModelForm):

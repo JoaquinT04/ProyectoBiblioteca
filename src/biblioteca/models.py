@@ -18,6 +18,7 @@ class PrestamoLibro(models.Model):
     socio = models.ForeignKey(Socio, on_delete= models.CASCADE)
     empleado = models.ForeignKey(Empleado, on_delete= models.CASCADE)
     libro = models.ForeignKey(Libro, on_delete= models.CASCADE)
+    activo = models.BooleanField(default=True)
 
     def __str__(self):
         cadena = f'Prestado Dia: {self.fecha_prestamos.strftime("%d/%m/%Y")} - Devolucion Dia: {self.fecha_devolucion.strftime("%d/%m/%Y")}\n'

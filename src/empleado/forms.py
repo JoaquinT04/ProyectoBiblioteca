@@ -1,5 +1,8 @@
 from django.forms import ModelForm
 from .models import Empleado
+from .validators import nombreValidator
+from django import forms
+
 
 class EmpleadoForm(ModelForm):
 		nombre  = forms.CharField(min_length=3,max_length=50, validators=[nombreValidator])

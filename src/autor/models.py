@@ -13,7 +13,4 @@ class Autor(models.Model):
         ordering = ["apellido","nombre","nacionalidad"]
     
     def __str__(self):
-        return f"""nombre: {self.nombre} 
-                   apellido: {self.apellido}
-                   nacionalidad: {self.nacionalidad}
-                   activo: {self.activo}"""
+        return f"{self.apellido},{self.nombre} ({self.nacionalidad})"

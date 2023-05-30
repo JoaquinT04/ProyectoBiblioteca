@@ -1,6 +1,7 @@
 from django.forms import ModelForm
 from .models import Socio
 from django import forms
+from .validators import nombreValidator
 
 
 class SocioForm(ModelForm):

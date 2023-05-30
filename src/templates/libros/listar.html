@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
+<<<<<<< HEAD
 {% block titulo %}Listado Libros{% endblock titulo %}
+=======
+
+{% block titulo %}Listar Libros{% endblock titulo %}
+
+>>>>>>> salvatierra
 {% block contenido %}
 <div class="container">
   <div class="text-center">
@@ -15,8 +21,11 @@
         <th scope="col">ESTADO</th>
         <th scope="col">MODIFICAR ESTADO</th>
         <th scope="col"></th>
+<<<<<<< HEAD
 				{% comment %} podemos agregar la columna detalle
 				que al hacer click en una lupa vaya a la url (empleado/pk) {% endcomment %}
+=======
+>>>>>>> salvatierra
       </tr>
     </thead>
     <tbody>
@@ -30,13 +39,20 @@
         <td>{{libro.autor}}</td>
         <td>
           {% if libro.activo %}
+<<<<<<< HEAD
           Activo
           {% else %}
           Inactivo
+=======
+            Activo
+          {% else %}
+            Inactivo
+>>>>>>> salvatierra
           {% endif %}
         </td>
         <td>
           {% if libro.activo %}
+<<<<<<< HEAD
           <a class="btn btn-danger btn-sm" href= ''>Desactivar</a>
           {% else %}
           <a class="btn btn-success btn-sm" href= ''>Activar</a>
@@ -44,6 +60,15 @@
         </td>
         <td>
           <a class="btn btn-dark btn-sm" href= ''>Editar</a>
+=======
+            <a class="btn btn-danger btn-sm" href= {% url 'libros:desactivar_libro' libro.pk %}>Desactivar</a>
+          {% else %}
+             <a class="btn btn-success btn-sm" href= {% url 'libros:activar_libro' libro.pk %}>Activar</a>
+          {% endif %}
+        </td>
+        <td>
+          <a class="btn btn-dark btn-sm" href= {% url 'libros:EditarLibro' empleado.pk %}>Editar</a>
+>>>>>>> salvatierra
         </td>
 			</tr>
     {% endfor %}
@@ -51,6 +76,12 @@
   </table>
 </div>
 <div class="container text-end">
+<<<<<<< HEAD
   <a class="btn btn-primary" href= ''>Agregar Libro</a>
 </div>
 {% endblock contenido %}
+=======
+  <a class="btn btn-primary" href= {% url 'libros:CrearLibros' %}>Agregar Libro</a>
+</div>
+{% endblock contenido %}
+>>>>>>> salvatierra

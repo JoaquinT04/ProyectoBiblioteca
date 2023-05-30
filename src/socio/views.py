@@ -14,7 +14,7 @@ class EditarSocio(UpdateView):
 class ListarSocios(ListView):
     model = Socio
     template_name = "socios/listar.html"
-    ordering = 'pk'
+    ordering = ("-activo", "apellido", "nombre")
         
 class CrearSocio(CreateView):
     model = Socio

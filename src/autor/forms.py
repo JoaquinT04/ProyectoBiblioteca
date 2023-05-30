@@ -13,4 +13,4 @@ class AutorForm(ModelForm):
 		nacionalidad = forms.CharField(min_length=3,max_length=50, validators=[nombreValidator])
 		class Meta:
 				model = Autor
-				fields = ["nombre","apellido","nacionalidad"]
+				fields = ["apellido","nombre","nacionalidad"]

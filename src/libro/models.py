@@ -7,7 +7,7 @@ class Libro(models.Model):
     # descripción del libro (cabe la posibilidad de no tener descripcion) y tambien se acepta no poner descripcion 
     descripcion = models.TextField(blank=True,null=True)
     # isbn del libro (El isbn es un estandard número de 13 cifras** que identifica a cada libro en el mundo)
-    isbn = models.PositiveIntegerField()
+    isbn = models.PositiveIntegerField(max_length=13)
     # aqui estara la información del autor que se encuentra en su respectivo modelo
     autor =  models.ForeignKey(Autor, on_delete= models.CASCADE)
     # activo hara referencia asi el libro esta disponible o no, por defecto a la hora de que se cree un libro estara disponible

@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from .validators import nombreValidator
 """ Creacion de la entidad Socio cuenta con:
 nombre = nombre del Socio (tipo Str)

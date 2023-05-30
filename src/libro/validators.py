@@ -20,3 +20,8 @@ def nombreValidator(value):
 			# [0-9] o algun caracter especial como['#','.','-','á','é','í','ó','ú',etc] 
 	else:	
 		raise ValidationError("Debe ingresar más de 3 caracteres")
+	
+def isbnValidator(value):
+	value = str(value)
+	if not len(value)==13:
+		raise ValidationError("Debe tener 13 dígitos")

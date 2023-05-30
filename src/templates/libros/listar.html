@@ -37,13 +37,13 @@
         </td>
         <td>
           {% if libro.activo %}
-            <a class="btn btn-danger btn-sm" href= ''>Desactivar</a>
+            <a class="btn btn-danger btn-sm" href= {% url 'libros:desactivar_libro' libro.pk %}>Desactivar</a>
           {% else %}
-             <a class="btn btn-success btn-sm" href= ''>Activar</a>
+             <a class="btn btn-success btn-sm" href= {% url 'libros:activar_libro' libro.pk %}>Activar</a>
           {% endif %}
         </td>
         <td>
-          <a class="btn btn-dark btn-sm" href= ''>Editar</a>
+          <a class="btn btn-dark btn-sm" href= {% url 'libros:EditarLibro' empleado.pk %}>Editar</a>
         </td>
 			</tr>
     {% endfor %}
@@ -51,6 +51,6 @@
   </table>
 </div>
 <div class="container text-end">
-  <a class="btn btn-primary" href= ''>Agregar Libro</a>
+  <a class="btn btn-primary" href= {% url 'libros:CrearLibros' %}>Agregar Libro</a>
 </div>
 {% endblock contenido %}

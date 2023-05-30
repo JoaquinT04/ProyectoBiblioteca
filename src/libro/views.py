@@ -14,3 +14,10 @@ class ListarLibro(ListView):
     model = Libro
     template_name = 'libros/listar.html'
     ordering = 'titulo'
+
+def desactivar_libro(request, id):
+    libro= get_object_or_404(Libro, id = id)
+    libro.activo = False
+    libro.save()
+    return redirect(reverse_lazy('libros:ListarLibros'))
+

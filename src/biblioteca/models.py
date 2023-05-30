@@ -2,7 +2,9 @@ from django.db import models
 from socio.models import Socio
 from empleado.models import Empleado
 from libro.models import Libro
-from datetime import datetime
+
+from datetime import timedelta
+from django.utils import timezone
 
 # El modelo PrestamoLibro llevara el registro de los libros prestados:
 # fecha_prestado: Fecha que se presta. Se genera automaticamente.
@@ -11,8 +13,8 @@ from datetime import datetime
 # empleado: Es la persona responsable del prestamo.
 # libro: Libro que se presta.
 class PrestamoLibro(models.Model):
-    fecha_prestamos = models.DateTimeField(default = datetime.now())
-    fecha_devolucion = models.DateTimeField(default = datetime.now())
+    fecha_prestamos = models.DateTimeField(default=timezone.now)
+    fecha_devolucion = models.DateTimeField(default=timezone.now() + timedelta(days=2))
     socio = models.ForeignKey(Socio, on_delete= models.CASCADE)
     empleado = models.ForeignKey(Empleado, on_delete= models.CASCADE)
     libro = models.ForeignKey(Libro, on_delete= models.CASCADE)

@@ -9,4 +9,5 @@ class PrestamoLibroForm(ModelForm):
 	empleado = forms.ModelChoiceField(queryset = Empleado.objects.filter(activo = True))
 	class Meta():
 		model = PrestamoLibro
-		fields =["fecha_prestamos","fecha_devolucion","libro","socio","empleado"]
+		fields =["libro","socio","empleado"]
+		

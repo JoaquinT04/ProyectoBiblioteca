@@ -1,7 +1,7 @@
 from django.db import models
 from socio.models import Socio
 from empleado.models import Empleado
-from libro.models import Lib
+from libro.models import Libro
 
 from datetime import timedelta
 from django.utils import timezone

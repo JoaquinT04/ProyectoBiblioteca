@@ -1,13 +1,13 @@
 from .models import PrestamoLibro
 from django.views.generic import CreateView, ListView, UpdateView
 from .forms import PrestamoLibroForm
-from .models import PrestamoLibro
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy
 
 class ListarPrestamoLibro(ListView):
-	model = PrestamoLibro
-	template_name = "biblioteca/listar.html"
+    model = PrestamoLibro
+    template_name = "biblioteca/listar.html"
+    ordering = ("fecha_prestamos")
 
 class CrearPrestamoLibro(CreateView):
     model = PrestamoLibro

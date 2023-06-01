@@ -1,5 +1,6 @@
 from django.db import models
 from autor.models import Autor
+from django.urls import reverse
 # Create your models here.
 class Libro(models.Model):
   # Titulo del libro (maximo 30 caracteres)
@@ -12,6 +13,9 @@ class Libro(models.Model):
     autor =  models.ForeignKey(Autor, on_delete= models.CASCADE)
     # activo hara referencia asi el libro esta disponible o no, por defecto a la hora de que se cree un libro estara disponible
     activo= models.BooleanField(default=True)
+
+    def get_absolute_url(self):
+        return reverse("libros:EditarLibro", kwargs={"pk": self.pk})
 
     def __str__(self) -> str:
       return f"{self.titulo}, Autor:{self.autor}"

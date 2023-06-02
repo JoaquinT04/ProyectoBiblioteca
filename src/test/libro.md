@@ -60,7 +60,7 @@ Se soluciona en el modelo de libro agregando unique=True en isbn.
 
 ![Imagen](assets/images/libro/carga06.png)
 
-Tambien se probó la carga de un ISBN negativo, lo cual probocaba la caida del servidor.
+Tambien se probó la carga de un ISBN negativo, lo cual provocaba la caida del servidor.
 Se corrigió en el validators.py de libro agregando un mensaje de error si se ingresa
 un numero negativo.
 </details>

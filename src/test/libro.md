@@ -15,6 +15,7 @@ Carga Exitosa.
 <details><summary>Segunda Carga</summary>
 
 ![Imagen](assets/images/libro/carga02.png)
+
 Carga Fallida. Se muestra error en Titulo.
 
 Se corrige.  
@@ -25,7 +26,8 @@ Carga exitosa.
 
 <details><summary>Tercer Carga</summary>
 
-![Imagen](assets/images/empleado/carga03.png)
+![Imagen](assets/images/libro/carga03.png)
+
 Carga Fallida. Se muestra mensaje, en ISBN solo se permiten 13 digitos.
 
 Se corrige.
@@ -36,7 +38,8 @@ Carga exitosa.
 
 <details><summary>Cuarta Carga</summary>
 
-![Imagen](assets/images/empleado/carga04.png)
+![Imagen](assets/images/libro/carga04.png)
+
 Carga Fallida. Se muestra mensaje de que debe elegirse un autor.
 
 Se corrige.

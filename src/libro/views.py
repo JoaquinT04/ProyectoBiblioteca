@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404 , redirect
 from .models import Libro
 from .forms import LibroForm
-from django.views.generic import UpdateView, ListView,CreateView
+from django.views.generic import UpdateView, ListView, CreateView
 from django.urls import reverse_lazy
 
 class CrearLibro(CreateView):
@@ -16,7 +16,7 @@ class EditarLibro(UpdateView):
     template_name = 'libros/editar.html' 
     success_url = reverse_lazy('libros:ListarLibros') 
 
-class ListarLibro(ListView):
+class ListarLibros(ListView):
     model = Libro
     template_name = 'libros/listar.html'
     ordering = 'titulo'

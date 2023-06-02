@@ -13,13 +13,11 @@
         <th scope="col">ISBN</th>
         <th scope="col">AUTOR</th>
         <th scope="col">ESTADO</th>
-        <th scope="col">MODIFICAR ESTADO</th>
+        <th scope="col">MODIFICAR</th>
         <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
-      {% comment %} aqui empleados va a varirar dependiendo 
-      de como me pasen las lista desde la views {% endcomment %}
     {% for libro in object_list %}
       <tr>
         <td>{{libro.titulo}}</td>
@@ -52,3 +50,4 @@
   <a class="btn btn-primary" href= {% url 'libros:CrearLibro' %}>Agregar Libro</a>
 </div>
 {% endblock contenido %}
+

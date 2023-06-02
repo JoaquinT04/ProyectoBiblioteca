@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from api.views import listar_libros
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +26,6 @@ urlpatterns = [
     path('libros/', include('libro.urls',namespace='libros')),
     path('prestamos/',include('biblioteca.urls',namespace='prestamos')),
     path('api/',include('api.urls',namespace='api')),
+
+    #path('api/libros', listar_libros, name='listar_libros'),
 ]

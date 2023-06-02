@@ -23,4 +23,6 @@ urlpatterns = [
     path('autores/',include('autor.urls',namespace='autores')),
     path('socios/', include('socio.urls',namespace='socios')),
     path('libros/', include('libro.urls',namespace='libros')),
+    path('prestamos/',include('biblioteca.urls',namespace='prestamos')),
+    path('api/',include('api.urls',namespace='api')),
 ]

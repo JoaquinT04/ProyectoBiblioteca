@@ -6,6 +6,7 @@ from libro.models import Libro
 from datetime import timedelta
 from django.utils import timezone
 
+
 # El modelo PrestamoLibro llevara el registro de los libros prestados:
 # fecha_prestado: Fecha que se presta. Se genera automaticamente.
 # fecha_devolucion: Fecha de decolucion. Se debe cargar obligatoriamente.
@@ -23,5 +24,6 @@ class PrestamoLibro(models.Model):
     def __str__(self):
         cadena = f'Prestado Dia: {self.fecha_prestamos.strftime("%d/%m/%Y")} - Devolucion Dia: {self.fecha_devolucion.strftime("%d/%m/%Y")}\n'
         cadena += f'[Socio: {self.socio} - Libro: {self.libro}]\n'
-        cadena += f'"Empleado: {self.empleado}"'
+        cadena += f'"Empleado: {self.empleado}"\n'
+        cadena += f'"Activo: {self.activo}"'
         return cadena

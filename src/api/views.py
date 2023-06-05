@@ -26,7 +26,7 @@ def detalle_libro(request,id):
 			'id':libro.id,
 			'titulo': libro.titulo,
 			'descripcion': libro.descripcion,
-			'autor': libro.autor.nombre
+			'autor': libro.autor.apellido+", "+libro.autor.nombre
 		})
 	else:
 		return JsonResponse({})

@@ -19,8 +19,10 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
 (App encargada de los endpoints de las otras apps envio de de informacion en formato JSON)
 
 **Contenido**
-- **views.py** ( Funcionalidades de envio de Datos en Formato JSON )
+- **views.py** ( Funciones de envio de Datos en Formato JSON )
+    - detalle_libro (Devuelve el Registro De un Libro en Fomato JSON mostrando los campos "Id, titulo, descripcion y autor" en caso de no encontrarlo devuelve una lista vacia )
 - **urls.py*** (Direcciones del Navegador)
+    - path /libros/<int:id>/ (Recibe la Id o Pk de un libro y hace uso de funcion detalle_libro para mostrar los datos del libro en formato JSON )
 </details>
 
 <details><summary>Autor</summary>
@@ -196,9 +198,12 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
 ## Testing
 
 - [**AUTOR**](src/test/autor.md)
+- [**BIBLIOTECA**]()
 - [**EMPLEADO**](src/test/empleado.md)
 - [**LIBRO**](src/test/libro.md)
 - [**SOCIO**](src/test/socio.md)
+- [**API**]()
+    - [**Libro**]()
 
 ## Autores y Colaboradores
 

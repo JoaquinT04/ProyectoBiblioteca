@@ -23,6 +23,7 @@ Segunda carga, intento realizar prestamo de un libro el cual ya estaba en presta
   
  Carga exitosa: Se corrigio agregando un validar en el campo del libro, con solo cambiar a un libro disponible se puede realizar la carga exitosa
 
+
 </details>
 
 <details><summary>Tercer Carga</summary>

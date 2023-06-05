@@ -1,6 +1,6 @@
 # Test Modulo Prestamo de Libros
 Fecha 05/06/23
-## Funcionalidad para agregar prestamo
+## Funcionalidad Agregar Prestamo
  
 Formulario de carga con Campos (Libro, Socio, Empleado):
 <details><summary>Primera Carga</summary>

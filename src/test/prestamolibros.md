@@ -88,6 +88,11 @@ Se muestra la carga exitosa:
 
 ## Registros en el Admin 
 **Admin**
-La base de datos se ve reflejada correctamente en el Admin.
+La base de datos se ve reflejada correctamente en el Admin:
+
 ![Imagen](assets/images/prestamoLibros/admin.png)
+
+![Imagen](assets/images/prestamoLibros/admin2.png)
+
+
 

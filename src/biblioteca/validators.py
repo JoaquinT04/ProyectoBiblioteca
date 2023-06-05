@@ -1,4 +1,6 @@
 from django.core.exceptions import ValidationError
+from .models import PrestamoLibro
+from libro.models import Libro
 
 def nombreValidator(value):
 	# value va a tener todo el string que se introdujo en el input
@@ -20,3 +22,27 @@ def nombreValidator(value):
 			# [0-9] o algun caracter especial como['#','.','-','á','é','í','ó','ú',etc] 
 	else:	
 		raise ValidationError("Debe ingresar más de 3 caracteres")
+	
+
+def validar_libro_disponible(value):
+	prestamos = PrestamoLibro.objects.all()
+	print(prestamos)
+	prestamo_dict = [
+	    {
+            'titulo': str(libro.libro.titulo),
+	    	'activo': libro.activo
+	    	
+        }
+        for libro in prestamos ]
+    
+	for libro in prestamo_dict:
+		
+
+		if libro["titulo"] == value.titulo and not libro["activo"] == False:
+			raise ValidationError("El libro no esta disponible")
+     
+
+	
+
+	
+    

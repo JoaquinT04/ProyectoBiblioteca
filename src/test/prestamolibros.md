@@ -3,9 +3,9 @@ Fecha 25/05/23
 ## Funcionalidad para agregar prestamo
  
 Formulario de carga con Campos (Libro, Socio, Empleado):
-<details><summary>F</summary>
+<details><summary>Primera Carga</summary>
 
-![Imagen](assets/images/prestamoLibros/primeracarga.png)
+![Imagen](assets/images/prestamolibros/primeracarga.png)
 
 Carga Exitosa   
 

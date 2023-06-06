@@ -1,5 +1,6 @@
 from django.http import JsonResponse
 from libro.models import Libro
+from socio.models import Socio
 
 # Create your views here.
    
@@ -30,3 +31,17 @@ def detalle_libro(request,id):
 		})
 	else:
 		return JsonResponse({})
+
+def listar_socios(request):
+    socios = Socio.objects.all()
+    socios_dict = [
+        {
+            'id': socio.pk,
+            'nombre': socio.nombre,
+            'apellido': socio.apellido,
+	    	'fecha de nacimiento': socio.fecha_nacimiento,
+		    'activo': socio.activo, 
+        }
+        for socio in socios
+    ]
+    return JsonResponse(socios_dict, safe=False)

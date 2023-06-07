@@ -10,7 +10,7 @@ class Autor(models.Model):
     activo = models.BooleanField(default = True)
 
     class Meta():
-        ordering = ["apellido","nombre","nacionalidad"]
+        ordering = ["id","apellido","nombre","nacionalidad"]
     
     def __str__(self):
         return f"{self.apellido}, {self.nombre} ({self.nacionalidad})"

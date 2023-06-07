@@ -3,47 +3,48 @@
 {% block contenido %}
 <div class="container">
   <div class="text-center">
-    <h3 class="title">Lista de Socios</h3>
+    <h3 class="title py-3">Lista de Socios</h3>
   </div>
-  <table class="table">
-    <thead>
-      <tr class="bg-dark text-white">
-        <th scope="col">APELLIDO</th>
-        <th scope="col">NOMBRE</th>
-        <th scope="col">FECHA DE NACIMIENTO</th>
-        <th scope="col">ESTADO</th>				
-        <th scope="col">MODIFICAR ESTADO</th>				
-        <th scope="col"></th>				
-      </tr>
-    </thead>
-    <tbody>     
-    {% for socio in object_list %}
-      <tr>
-        <td>{{socio.apellido}}</td>
-        <td>{{socio.nombre}}</td>
-        <td>{{socio.fecha_nacimiento}}</td>
-        <td>
-          {% if socio.activo %}
-          Activo
-          {% else %}
-          Inactivo
-          {% endif %}
-        </td>
-        <td>
-          {% if socio.activo %}
-          <a class="btn btn-danger btn-sm" href= {% url 'socios:desactivar_socio' socio.pk %}>Desactivar</a>
-          {% else %}
-          <a class="btn btn-success btn-sm" href= {% url 'socios:activar_socio' socio.pk %}>Activar</a>
-          {% endif %}
-        </td>
-        <td>
-          <a class="btn btn-dark btn-sm" href= {% url 'socios:EditarSocio' socio.pk %}>Editar</a>
-        </td>
-			</tr>
-    {% endfor %}
-    </tbody>
-  </table>
-
+  <div class="table-responsive-sm">
+    <table class="table table-hover align-middle">
+      <thead>
+        <tr class="bg-primary text-white">
+          <th scope="col">APELLIDO</th>
+          <th scope="col">NOMBRE</th>
+          <th scope="col">FECHA DE NACIMIENTO</th>
+          <th scope="col">ESTADO</th>				
+          <th scope="col">MODIFICAR ESTADO</th>				
+          <th scope="col"></th>				
+        </tr>
+      </thead>
+      <tbody>     
+      {% for socio in object_list %}
+        <tr class="table-info">
+          <td>{{socio.apellido}}</td>
+          <td>{{socio.nombre}}</td>
+          <td>{{socio.fecha_nacimiento}}</td>
+          <td>
+            {% if socio.activo %}
+            Activo
+            {% else %}
+            Inactivo
+            {% endif %}
+          </td>
+          <td>
+            {% if socio.activo %}
+            <a class="btn btn-danger btn-sm" href= {% url 'socios:desactivar_socio' socio.pk %}>Desactivar</a>
+            {% else %}
+            <a class="btn btn-success btn-sm" href= {% url 'socios:activar_socio' socio.pk %}>Activar</a>
+            {% endif %}
+          </td>
+          <td>
+            <a class="btn btn-dark btn-sm" href= {% url 'socios:EditarSocio' socio.pk %}>Editar</a>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
   <div class="container text-end">
     <a class="btn btn-primary" href= {% url 'socios:CrearSocio' %}>Agregar Socio</a>
   </div>

@@ -40,8 +40,7 @@ def listar_socios(request):
             'nombre': socio.nombre,
             'apellido': socio.apellido,
 	    	'fecha de nacimiento': socio.fecha_nacimiento,
-		    'activo': socio.activo, 
-        }
+		}
         for socio in socios
     ]
     return JsonResponse(socios_dict, safe=False)

@@ -6,9 +6,8 @@ Comisión 1. Squad 2. Bootcamp Alkemy
 ## Descripcion
 
 La aplicación web esta diseñada usando Python y Django para dar
-funcionalidades a una biblioteca, la cual permitirá a sus usuarios consultar el
-catálogo de libros, y un listado de los préstamos de libros realizados a sus
-socios. Cuenta con endpoint con devoluciones de datos en JSON
+funcionalidades a una biblioteca, la cual permitirá al usuario agregar o quitar libros con sus correspondientes autores, consultar el
+listado de libros y autores, agregar o quitar socios a los cuales se les prestaria dichos libros, agregar o quitar, los préstamos realizados consutarlos en una lista y agregar o quitar empleados que trabajen en la Libreria incluyendo un listado de los mismos. Cuenta con endpoint con devoluciones de datos en JSON
 
 ## Modulos
 
@@ -20,7 +19,10 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
 
 **Contenido**
 - **views.py** ( Funciones de envio de Datos en Formato JSON )
-    - detalle_libro (Devuelve el Registro De un Libro en Fomato JSON mostrando los campos "Id, titulo, descripcion y autor" en caso de no encontrarlo devuelve una lista vacia )
+    - detalle_libro (Devuelve el Registro De un Libro en Fomato JSON mostrando los campos: "Id, titulo, descripcion y autor", en caso de no encontrarlo devuelve una lista vacia )
+    - listar_empleados (Devuelve el listado completo de empleados mostrando sus campos: "Id, nombre, apellido y numero de legajo" en formato JSON)
+    . listar_libros (Devuelve el listado completo de libros mostrando sus campos: "Id, titulo y autor" en formato JSON)
+    . listar_socios (Devuelve el listado completo de socios mostrando sus campos: "Id, nombre, apellido y fecha de nacimiento" en formato JSON)
 - **urls.py*** (Direcciones del Navegador)
     - path /libros/<int:id>/ (Recibe la Id o Pk de un libro y hace uso de funcion detalle_libro para mostrar los datos del libro en formato JSON )
 </details>
@@ -177,14 +179,125 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
         
 ## Visual       
    
- Algunas Screenshots de nuestros templates Aqui
-- HOME
-- SOCIOS
-- PRESTAMO LIBRO
-- LISTADOS
-- ETC
+<details><summary>HOME</summary>
 
-## Instalacion
+![HOME](src/static/readme/home.png)
+
+<p align="center">  
+HOME
+</p>
+
+</details>
+
+<details><summary>API</summary>
+
+![detalle](src/static/readme/noimage.png)
+
+<p align="center">  
+Detalle Libro
+</p>
+
+![lista Libros](src/static/readme/noimage.png)
+
+<p align="center">  
+Lista Libros
+</p>
+
+![Lista Socios](src/static/readme/noimage.png)
+
+<p align="center">  
+Lista Socios
+</p>
+
+![Lista Empleados](src/static/readme/noimage.png)
+
+<p align="center">  
+Lista Empleados
+</p>
+
+</details>
+
+<details><summary>AUTOR</summary>
+
+![Lista](src/static/readme/noimage.png)
+
+<p align="center">  
+Listado de Autores
+</p>
+
+![Form](src/static/readme/noimage.png)
+
+<p align="center">  
+Formulario Alta o Modificacion
+</p>
+
+</details>
+
+<details><summary>BIBLIOTECA</summary>
+
+![Lista](src/static/readme/noimage.png)
+
+<p align="center">  
+Listado Prestamo de Libros
+</p>
+
+![Form](src/static/readme/noimage.png)
+
+<p align="center">  
+Formulario Alta o Modificacion
+</p>
+
+</details>
+
+<details><summary>EMPLEADO</summary>
+
+![Lista](src/static/readme/noimage.png)
+
+<p align="center">  
+Listado de Empleados
+</p>
+
+![Form](src/static/readme/noimage.png)
+
+<p align="center">  
+Formulario Alta o Modificacion
+</p>
+
+</details>
+
+<details><summary>LIBRO</summary>
+
+![Lista](src/static/readme/noimage.png)
+
+<p align="center">  
+Listado de Libros
+</p>
+
+![Form](src/static/readme/noimage.png)
+
+<p align="center">  
+Formulario Alta o Modificacion
+</p>
+
+</details>
+
+<details><summary>SOCIO</summary>
+
+![Lista](src/static/readme/noimage.png)
+
+<p align="center">  
+Listado de Socios
+</p>
+
+![Form](src/static/readme/noimage.png)
+
+<p align="center">  
+Formulario Alta o Modificacion
+</p>
+
+</details>
+
+## Instalación
 
  REQUERIMIENTOS:
 - asgiref 3.6.0
@@ -198,12 +311,11 @@ socios. Cuenta con endpoint con devoluciones de datos en JSON
 ## Testing
 
 - [**AUTOR**](src/test/autor.md)
-- [**BIBLIOTECA**]()
+- [**BIBLIOTECA**](src/test/prestamolibros.md)
 - [**EMPLEADO**](src/test/empleado.md)
 - [**LIBRO**](src/test/libro.md)
 - [**SOCIO**](src/test/socio.md)
-- [**API**]()
-    - [**Libro**]()
+- [**API**](src/test/api.md)
 
 ## Autores y Colaboradores
 

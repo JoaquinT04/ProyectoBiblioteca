@@ -3,46 +3,48 @@
 {% block contenido %}
 <div class="container">
     <div class="text-center">
-        <h3 class="title">Lista de Autores</h3>
+        <h3 class="title py-3">Lista de Autores</h3>
     </div>
-    <table class="table">
-        <thead>
-            <tr class="bg-dark text-white">
-                <th scope="col">APELLIDO</th>
-                <th scope="col">NOMBRE</th>
-                <th scope="col">NACIONALIDAD</th>
-                <th scope="col">ESTADO</th>
-                <th scope="col">MODIFICAR ESTADO</th>
-                <th scope="col"></th>
+    <div class="table-responsive-sm">
+        <table class="table table-hover align-middle">
+            <thead>
+                <tr class="bg-primary text-white">
+                    <th scope="col">APELLIDO</th>
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">NACIONALIDAD</th>
+                    <th scope="col">ESTADO</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for autor in object_list %}
+            <tr class="table-info">
+                <td>{{autor.apellido}}</td>
+                <td>{{autor.nombre}}</td>
+                <td>{{autor.nacionalidad}}</td>
+                <td>
+                {% if autor.activo %}
+                Activo
+                {% else %}
+                Inactivo
+                {% endif %}
+                </td>
+                <td>
+                {% if autor.activo %}
+                <a class="btn btn-danger btn-sm" href= {% url 'autores:desactivar_autor' autor.pk %}>Desactivar</a>
+                {% else %}
+                <a class="btn btn-success btn-sm" href= {% url 'autores:activar_autor' autor.pk %}>Activar</a>
+                {% endif %}
+                </td>
+                <td>
+                <a class="btn btn-dark btn-sm" href= {% url 'autores:EditarAutor' autor.pk %}>Editar</a>
+                </td>
             </tr>
-        </thead>
-        <tbody>
-        {% for autor in object_list %}
-        <tr>
-            <td>{{autor.apellido}}</td>
-            <td>{{autor.nombre}}</td>
-            <td>{{autor.nacionalidad}}</td>
-            <td>
-            {% if autor.activo %}
-            Activo
-            {% else %}
-            Inactivo
-            {% endif %}
-            </td>
-            <td>
-            {% if autor.activo %}
-            <a class="btn btn-danger btn-sm" href= {% url 'autores:desactivar_autor' autor.pk %}>Desactivar</a>
-            {% else %}
-            <a class="btn btn-success btn-sm" href= {% url 'autores:activar_autor' autor.pk %}>Activar</a>
-            {% endif %}
-            </td>
-            <td>
-            <a class="btn btn-dark btn-sm" href= {% url 'autores:EditarAutor' autor.pk %}>Editar</a>
-            </td>
-        </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </div>
 <div class="container text-end">
   <a class="btn btn-primary" href= {% url 'autores:CrearAutor' %}>Agregar Autor</a>

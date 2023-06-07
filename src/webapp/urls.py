@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from api.views import listar_libros
+from .views import cargar_index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',cargar_index),
+    path('home/',cargar_index),
     path('empleados/',include('empleado.urls',namespace='empleados')),
     path('autores/',include('autor.urls',namespace='autores')),
     path('socios/', include('socio.urls',namespace='socios')),
@@ -29,3 +31,9 @@ urlpatterns = [
 
     #path('api/libros', listar_libros, name='listar_libros'),
 ]
+
+from django.conf.urls.static import static
+from django.conf import settings
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

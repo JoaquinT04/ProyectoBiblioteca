@@ -3,48 +3,50 @@
 {% block contenido %}
 <div class="container">
   <div class="text-center">
-    <h3 class="title">Lista de Libros</h3>
+    <h3 class="title py-3">Lista de Libros</h3>
   </div>
-  <table class="table">
-    <thead>
-      <tr class="bg-dark text-white">
-        <th scope="col">TITULO</th>
-        <th scope="col">DESCRIPCION</th>
-        <th scope="col">ISBN</th>
-        <th scope="col">AUTOR</th>
-        <th scope="col">ESTADO</th>
-        <th scope="col">MODIFICAR</th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody>
-    {% for libro in object_list %}
-      <tr>
-        <td>{{libro.titulo}}</td>
-        <td>{{libro.descripcion}}</td>
-        <td>{{libro.isbn}}</td>
-        <td>{{libro.autor}}</td>
-        <td>
-          {% if libro.activo %}
-          Activo
-          {% else %}
-          Inactivo
-          {% endif %}
-        </td>
-        <td>
-          {% if libro.activo %}
-            <a class="btn btn-danger btn-sm" href= {% url 'libros:desactivar_libro' libro.pk %}>Desactivar</a>
-          {% else %}
-             <a class="btn btn-success btn-sm" href= {% url 'libros:activar_libro' libro.pk %}>Activar</a>
-          {% endif %}
-        </td>
-        <td>
-          <a class="btn btn-dark btn-sm" href= {% url 'libros:EditarLibro' libro.pk %}>Editar</a>
-        </td>
-			</tr>
-    {% endfor %}
-    </tbody>
-  </table>
+  <div class="table-responsive-sm">
+    <table class="table table-hover align-middle">
+      <thead>
+        <tr class="bg-primary text-white">
+          <th scope="col">TITULO</th>
+          <th scope="col">DESCRIPCION</th>
+          <th scope="col">ISBN</th>
+          <th scope="col">AUTOR</th>
+          <th scope="col">ESTADO</th>
+          <th scope="col">MODIFICAR</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for libro in object_list %}
+        <tr class="table-info">
+          <td>{{libro.titulo}}</td>
+          <td>{{libro.descripcion}}</td>
+          <td>{{libro.isbn}}</td>
+          <td>{{libro.autor}}</td>
+          <td>
+            {% if libro.activo %}
+            Activo
+            {% else %}
+            Inactivo
+            {% endif %}
+          </td>
+          <td>
+            {% if libro.activo %}
+              <a class="btn btn-danger btn-sm" href= {% url 'libros:desactivar_libro' libro.pk %}>Desactivar</a>
+            {% else %}
+               <a class="btn btn-success btn-sm" href= {% url 'libros:activar_libro' libro.pk %}>Activar</a>
+            {% endif %}
+          </td>
+          <td>
+            <a class="btn btn-dark btn-sm" href= {% url 'libros:EditarLibro' libro.pk %}>Editar</a>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
 <div class="container text-end">
   <a class="btn btn-primary" href= {% url 'libros:CrearLibro' %}>Agregar Libro</a>

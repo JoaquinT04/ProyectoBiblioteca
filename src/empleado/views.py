@@ -13,7 +13,7 @@ class EditarEmpleado(UpdateView):
 class ListarEmpleados(ListView):
     model = Empleado
     template_name = "empleados/listar.html"
-    ordering = ("-activo", "apellido", "nombre")
+    ordering = ("apellido", "nombre")
         
 class CrearEmpleado(CreateView):
     model = Empleado

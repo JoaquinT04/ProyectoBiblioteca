@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     'autor',
     'socio',
     'api',
+
+    # Apps de terceros
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

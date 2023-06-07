@@ -1,32 +1,14 @@
-from django.http import JsonResponse
 from libro.models import Libro
+from empleado.models import Empleado
+# django rest framework
+from rest_framework import viewsets
+from .serializer import LibroGetSerializer,EmpleadoGetSerializer
 
 # Create your views here.
-   
-def listar_libros(request):
-    libros = Libro.objects.all()
-    libros_dict = [
-        {
-            'id': libro.id,
-            'titulo': libro.titulo,
-            'autor': str(libro.autor) 
-        }
-        for libro in libros
-    ]
-    return JsonResponse(libros_dict,safe=False)
+class LibroViewSet(viewsets.ModelViewSet):
+	queryset = Libro.objects.all()
+	serializer_class = LibroGetSerializer
 
-def detalle_libro(request,id):
-	try: 
-		libro = Libro.objects.get(id = id)
-	except:
-		libro = None
-
-	if libro != None:
-		return JsonResponse({
-			'id':libro.id,
-			'titulo': libro.titulo,
-			'descripcion': libro.descripcion,
-			'autor': libro.autor.apellido+", "+libro.autor.nombre
-		})
-	else:
-		return JsonResponse({})
+class EmpleadoViewSet(viewsets.ModelViewSet):
+	queryset = Empleado.objects.all()
+	serializer_class = EmpleadoGetSerializer

@@ -25,47 +25,49 @@
 {% block contenido %}
 <div class="container">
   <div class="text-center">
-    <h3 class="title">Lista de Prestamos</h3>
+    <h3 class="title py-3">Lista de Prestamos</h3>
   </div>
-  <table class="table">
-    <thead>
-      <tr class="bg-dark text-white">
-        <th scope="col">ID</th>
-        <th scope="col">LIBRO</th>
-        <th scope="col">SOCIO</th>
-        <th scope="col">PRESTAMO</th>
-        <th scope="col">DEVOLUCION</th>
-        <th scope="col">EMPLEADO</th>
-        <th scope="col"></th>
-        <th scope="col"></th>
-        <th scope="col"></th>
-				{% comment %} podemos agregar la columna detalle
-				que al hacer click en una lupa vaya a la url (empleado/pk) {% endcomment %}
-      </tr>
-    </thead>
-    <tbody>
-      {% comment %} aqui empleados va a varirar dependiendo 
-      de como me pasen las lista desde la views {% endcomment %}
-    {% for prestamo in object_list %}
-      {% if prestamo.activo %}
-      <tr>
-        <td>{{prestamo.pk}}</td>
-        <td>{{prestamo.libro}}</td>
-        <td>{{prestamo.socio}}</td>
-        <td>{{prestamo.fecha_prestamos}}</td>
-        <td>{{prestamo.fecha_devolucion}}</td>
-        <td>{{prestamo.empleado}}</td>
-        <td>
-          <button class="btn btn-danger btn-sm" onClick="eliminarPrestamo({{prestamo.pk}})">Borrar</button>
-        </td>
-        <td>
-          <a class="btn btn-dark btn-sm" href="{% url 'prestamolibros:EditarPrestamoLibro' prestamo.pk %}">Editar</a>
-        </td>
-			</tr>
-      {% endif %}
-    {% endfor %}
-    </tbody>
-  </table>
+  <div class="table-responsive-sm">
+    <table class="table table-hover align-middle">
+      <thead>
+        <tr class="bg-primary text-white">
+          <th scope="col">ID</th>
+          <th scope="col">LIBRO</th>
+          <th scope="col">SOCIO</th>
+          <th scope="col">PRESTAMO</th>
+          <th scope="col">DEVOLUCION</th>
+          <th scope="col">EMPLEADO</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          {% comment %} podemos agregar la columna detalle
+          que al hacer click en una lupa vaya a la url (empleado/pk) {% endcomment %}
+        </tr>
+      </thead>
+      <tbody>
+        {% comment %} aqui empleados va a varirar dependiendo 
+        de como me pasen las lista desde la views {% endcomment %}
+      {% for prestamo in object_list %}
+        {% if prestamo.activo %}
+        <tr class="table-info">
+          <td>{{prestamo.pk}}</td>
+          <td>{{prestamo.libro}}</td>
+          <td>{{prestamo.socio}}</td>
+          <td>{{prestamo.fecha_prestamos}}</td>
+          <td>{{prestamo.fecha_devolucion}}</td>
+          <td>{{prestamo.empleado}}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" onClick="eliminarPrestamo({{prestamo.pk}})">Borrar</button>
+          </td>
+          <td>
+            <a class="btn btn-dark btn-sm" href="{% url 'prestamolibros:EditarPrestamoLibro' prestamo.pk %}">Editar</a>
+          </td>
+        </tr>
+        {% endif %}
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
 <div class="container text-end">
   <a class="btn btn-primary" href="{% url 'prestamolibros:CrearPrestamoLibro' %}">Agregar Prestamo</a>

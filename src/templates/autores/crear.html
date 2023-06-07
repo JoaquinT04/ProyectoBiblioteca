@@ -3,9 +3,9 @@
 {% block contenido %}
     <div class="container">
         <div class="text-center">
-            <h3 class="title">Agregar Autor</h3>
+            <h3 class="title py-3">Agregar Autor</h3>
         </div>
-        <div class="container">
+        <div class="container border border-primary border-3 rounded bg-primary-subtle p-5 w-50">
             <form class="align-center" method="POST" action="">
                 {% csrf_token %}
                 {{form.as_p}}
@@ -13,7 +13,7 @@
             </form>
         </div>
         <div class="container text-end">
-            <a class="btn btn-primary" href= {% url 'autores:ListarAutores' %}>Volver al listado</a>
+            <a class="btn btn-primary my-2" href= {% url 'autores:ListarAutores' %}>Volver al listado</a>
         </div>
     </div>
 {% endblock contenido %}

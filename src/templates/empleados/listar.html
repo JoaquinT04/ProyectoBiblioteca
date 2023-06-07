@@ -3,50 +3,52 @@
 {% block contenido %}
 <div class="container">
   <div class="text-center">
-    <h3 class="title">Lista de Empleados</h3>
+    <h3 class="title py-3">Lista de Empleados</h3>
   </div>
-  <table class="table">
-    <thead>
-      <tr class="bg-dark text-white">
-        <th scope="col">APELLIDO</th>
-        <th scope="col">NOMBRE</th>
-        <th scope="col">NUMERO DE LEGAJO</th>
-        <th scope="col">ESTADO</th>
-        <th scope="col">MODIFICAR ESTADO</th>
-        <th scope="col"></th>
-				{% comment %} podemos agregar la columna detalle
-				que al hacer click en una lupa vaya a la url (empleado/pk) {% endcomment %}
-      </tr>
-    </thead>
-    <tbody>
-      {% comment %} aqui empleados va a varirar dependiendo 
-      de como me pasen las lista desde la views {% endcomment %}
-    {% for empleado in object_list %}
-      <tr>
-        <td>{{empleado.apellido}}</td>
-        <td>{{empleado.nombre}}</td>
-        <td>{{empleado.numero_legajo}}</td>
-        <td>
-          {% if empleado.activo %}
-          Activo
-          {% else %}
-          Inactivo
-          {% endif %}
-        </td>
-        <td>
-          {% if empleado.activo %}
-          <a class="btn btn-danger btn-sm" href= {% url 'empleados:desactivar_empleado' empleado.pk %}>Desactivar</a>
-          {% else %}
-          <a class="btn btn-success btn-sm" href= {% url 'empleados:activar_empleado' empleado.pk %}>Activar</a>
-          {% endif %}
-        </td>
-        <td>
-          <a class="btn btn-dark btn-sm" href= {% url 'empleados:EditarEmpleado' empleado.pk %}>Editar</a>
-        </td>
-			</tr>
-    {% endfor %}
-    </tbody>
-  </table>
+  <div class="table-responsive-sm">
+    <table class="table table-hover align-middle">
+      <thead>
+        <tr class="bg-primary text-white">
+          <th scope="col">APELLIDO</th>
+          <th scope="col">NOMBRE</th>
+          <th scope="col">LEGAJO</th>
+          <th scope="col">ESTADO</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          {% comment %} podemos agregar la columna detalle
+          que al hacer click en una lupa vaya a la url (empleado/pk) {% endcomment %}
+        </tr>
+      </thead>
+      <tbody>
+        {% comment %} aqui empleados va a varirar dependiendo 
+        de como me pasen las lista desde la views {% endcomment %}
+      {% for empleado in object_list %}
+        <tr class="table-info">
+          <td>{{empleado.apellido}}</td>
+          <td>{{empleado.nombre}}</td>
+          <td>{{empleado.numero_legajo}}</td>
+          <td>
+            {% if empleado.activo %}
+            Activo
+            {% else %}
+            Inactivo
+            {% endif %}
+          </td>
+          <td>
+            {% if empleado.activo %}
+            <a class="btn btn-danger btn-sm" href= {% url 'empleados:desactivar_empleado' empleado.pk %}>Desactivar</a>
+            {% else %}
+            <a class="btn btn-success btn-sm" href= {% url 'empleados:activar_empleado' empleado.pk %}>Activar</a>
+            {% endif %}
+          </td>
+          <td>
+            <a class="btn btn-dark btn-sm" href= {% url 'empleados:EditarEmpleado' empleado.pk %}>Editar</a>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
 <div class="container text-end">
   <a class="btn btn-primary" href= {% url 'empleados:CrearEmpleado' %}>Agregar Empleado</a>

@@ -1,5 +1,6 @@
 from django.http import JsonResponse
 from libro.models import Libro
+from autor.models import Autor
 
 # Create your views here.
    
@@ -30,3 +31,16 @@ def detalle_libro(request,id):
 		})
 	else:
 		return JsonResponse({})
+	
+def listar_autores(request):
+    autores = Autor.objects.all()
+    autores_dict = [
+		{
+			'id': autor.id,
+			'apellido': autor.apellido,
+			'nombre': autor.nombre,
+			'nacionalidad': autor.nacionalidad, 
+		}
+		for autor in autores
+	]
+    return JsonResponse(autores_dict, safe=False)

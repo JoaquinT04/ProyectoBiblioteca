@@ -23,8 +23,11 @@ listado de libros y autores, agregar o quitar socios a los cuales se les prestar
     - listar_empleados (Devuelve el listado completo de empleados mostrando sus campos: "Id, nombre, apellido y numero de legajo" en formato JSON)
     . listar_libros (Devuelve el listado completo de libros mostrando sus campos: "Id, titulo y autor" en formato JSON)
     . listar_socios (Devuelve el listado completo de socios mostrando sus campos: "Id, nombre, apellido y fecha de nacimiento" en formato JSON)
-- **urls.py*** (Direcciones del Navegador)
-    - path /libros/<int:id>/ (Recibe la Id o Pk de un libro y hace uso de funcion detalle_libro para mostrar los datos del libro en formato JSON )
+- **urls.py** (Direcciones del Navegador)
+    - path /libros/<int:id>/ ( Recibe la Id o Pk de un libro y hace uso de funcion  detalle_libro para mostrar los datos del libro en formato JSON )
+    - path /empleados/ ( Hace uso de funcion  listar_empleados para mostrar una lista con los datos de los empleados en formato JSON )
+    - path /libros/ ( Hace uso de funcion  listar_libros para mostrar una lista con los datos de los libros en formato JSON )
+    - path /socios/ ( Hace uso de funcion  listar_socios para mostrar una lista con los datos de los socios en formato JSON )
 </details>
 
 <details><summary>Autor</summary>
@@ -49,7 +52,7 @@ listado de libros y autores, agregar o quitar socios a los cuales se les prestar
     - EditarAutor ( Utiliza su formulario ***forms.py*** para editar un Autor / uso Generic Views )
     - activar_autor ( funcion que cambia Activo a True)
     - desactivar_autor ( funcion que cambia Activo a False)
-- **urls.py*** (Direcciones del Navegador)
+- **urls.py** (Direcciones del Navegador)
     - path /nuevo/ (Uso de clase CrearAutor y el template crear.html en la ruta "templates/autores/" para la creacion de un nuevo autor)    
     - path /listar/ (Uso de clase ListarAutores y el template listar.html en la ruta "templates/autores/" para mostrar la lista de Autores creados)
     - path /modificar/<int:id>/ (Recibe la Id o Pk de un autor y hace uso de clase EditarAutor y el template editar.html en la ruta "templates/autores/" para modificarlo)
@@ -79,7 +82,7 @@ listado de libros y autores, agregar o quitar socios a los cuales se les prestar
     - ListarPrestamoLibro ( Funcion que utiliza un template para mostrar la lista / uso Generic Views )
     - EditarPrestamoLibro ( Utiliza su formulario ***forms.py*** para editar un Prestamo / uso Generic Views )
     - desactivar_prestamo ( funcion que cambia Activo a False)
-- **urls.py*** (Direcciones del Navegador)
+- **urls.py** (Direcciones del Navegador)
     - path /nuevo/ (Uso de clase CrearPrestamoLibro y el template crear.html en la ruta "templates/biblioteca/" para la creacion de un nuevo prestamo)    
     - path /listar/ (Uso de clase ListarPrestamoLibro y el template listar.html en la ruta "templates/biblioteca/" para mostrar la lista de prestamos creados)
     - path /modificar/<int:id>/ (Recibe la Id o Pk de un prestamo y hace uso de clase EditarPrestamoLibro y el template editar.html en la ruta "templates/biblioteca/" para modificarlo)
@@ -108,7 +111,7 @@ listado de libros y autores, agregar o quitar socios a los cuales se les prestar
     - EditarEmpleado ( Utiliza su formulario ***forms.py*** para editar un Empleado / uso Generic Views )
     - activar_empleado ( funcion que cambia Activo a True )
     - desactivar_empleado ( funcion que cambia Activo a False )
-- **urls.py*** (Direcciones del Navegador)
+- **urls.py** (Direcciones del Navegador)
     - path /nuevo/ (Uso de clase CrearEmpleado y el template crear.html en la ruta "templates/empleados/" para la creacion de un nuevo empleado)    
     - path /listar/ (Uso de clase ListarEmpleados y el template listar.html en la ruta "templates/empleados/" para mostrar la lista de Empleados creados)
     - path /modificar/<int:id>/ (Recibe la Id o Pk de un Empleado y hace uso de clase EditarEmpleado y el template editar.html en la ruta "templates/empleados/" para modificarlo)
@@ -139,7 +142,7 @@ listado de libros y autores, agregar o quitar socios a los cuales se les prestar
     - EditarLibro ( Utiliza su formulario ***forms.py*** para editar un Libro / uso Generic Views )
     - activar_libro ( funcion que cambia Activo a True )
     - desactivar_libro ( funcion que cambia Activo a False )
-- **urls.py*** (Direcciones del Navegador)
+- **urls.py** (Direcciones del Navegador)
     - path /nuevo/ (Uso de clase CrearLibro y el template crear.html en la ruta "templates/libros/" para la creacion de un nuevo libro )    
     - path /listar/ (Uso de clase ListarLibros y el template listar.html en la ruta "templates/libros/" para mostrar la lista de Libros creados)
     - path /modificar/<int:id>/ (Recibe la Id o Pk de un libro y hace uso de clase EditarLibro y el template editar.html en la ruta "templates/libros/" para modificarlo)
@@ -169,14 +172,36 @@ listado de libros y autores, agregar o quitar socios a los cuales se les prestar
     - EditarSocio ( Utiliza su formulario ***forms.py*** para editar un Socio / uso Generic Views )
     - activar_socio ( funcion que cambia Activo a True )
     - desactivar_socio ( funcion que cambia Activo a False )
-- **urls.py*** (Direcciones del Navegador)
+- **urls.py** (Direcciones del Navegador)
     - path /nuevo/ (Uso de clase CrearSocio y el template crear.html en la ruta "templates/socios/" para la creacion de un nuevo libro )    
     - path /listar/ (Uso de clase ListarSocios y el template listar.html en la ruta "templates/socios/" para mostrar la lista de Libros creados)
     - path /modificar/<int:id>/ (Recibe la Id o Pk de un socio y hace uso de clase EditarSocio y el template editar.html en la ruta "templates/socios/" para modificarlo)
     - path /activar/<int:id>/ (Recibe la Id o Pk de un Socio y hace uso de funcion activar_libro para cambiar el campo Activo a True)
     - path /desactivar/<int:id>/ (Recibe la Id o Pk de un Socio y hace uso de funcion desactivar_libro para cambiar el campo Activo a False)
 </details>        
-        
+
+<details><summary>WebApp</summary>
+ 
+**Descripcion**
+ 
+(App principal del proyecto donde se encuentarn registradas las demas aplicacciones cuenta con un View para el renderizado del Home y el redireccionamiento a las demas Urls de las otras Apps )
+ 
+**Contenido**
+
+- **views.py** ( Funcion de Rendrizado del Home )
+    - cargar_index ( Funcion utilizada para renderizar el template "home.html" )
+- **urls.py** (Direcciones del Navegador)
+    - path /admin/ ( Permite el acceso a la pantalla del Admin requiere la creacion de un super usuario para la manipulacion de la base de datos )
+    - path // ( Utiliza la funcion cargar_index para hacer el renderizado del template "home.html" )
+    - path /home/ ( Utiliza la funcion cargar_index para hacer el renderizado del template "home.html" )
+    - path /empleados/ ( Redirecciona a las urls de la App empleado )
+    - path /autores/ ( Redirecciona a las urls de la App autor )
+    - path /socios/ ( Redirecciona a las urls de la App socio )
+    - path /libros/ ( Redirecciona a las urls de la App libro )
+    - path /prestamos/ ( Redirecciona a las urls de la App biblioteca )
+    - path /api/ ( Redirecciona a las urls de la App api )
+</details>
+
 ## Visual       
    
 <details><summary>HOME</summary>

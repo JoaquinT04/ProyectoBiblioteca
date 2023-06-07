@@ -1,5 +1,4 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 from .views import listar_libros, detalle_libro, listar_socios
 
 app_name = "api"

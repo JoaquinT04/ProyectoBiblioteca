@@ -1,67 +1,14 @@
-
-from django.http import JsonResponse
-
 from libro.models import Libro
-from socio.models import Socio
-from autor.models import Autor
-
+from empleado.models import Empleado
+# django rest framework
+from rest_framework import viewsets
+from .serializer import LibroGetSerializer,EmpleadoGetSerializer
 
 # Create your views here.
+class LibroViewSet(viewsets.ModelViewSet):
+	queryset = Libro.objects.all()
+	serializer_class = LibroGetSerializer
 
-
-
-
-""" def listar_libros(request):
-    libros = Libro.objects.all()
-    libros_dict = [
-        {
-            'id': libro.id,
-            'titulo': libro.titulo,
-            'autor': str(libro.autor) 
-        }
-        for libro in libros
-    ]
-    return JsonResponse(libros_dict,safe=False)
-
-def detalle_libro(request,id):
-	try: 
-		libro = Libro.objects.get(id = id)
-	except:
-		libro = None
-
-	if libro != None:
-		return JsonResponse({
-			'id':libro.id,
-			'titulo': libro.titulo,
-			'descripcion': libro.descripcion,
-			'autor': libro.autor.apellido+", "+libro.autor.nombre
-		})
-	else:
-		return JsonResponse({})	
-
-def listar_socios(request):
-    socios = Socio.objects.all()
-    socios_dict = [
-        {
-            'id': socio.pk,
-            'nombre': socio.nombre,
-            'apellido': socio.apellido,
-	    	'fecha de nacimiento': socio.fecha_nacimiento,
-		}
-        for socio in socios
-    ]
-    return JsonResponse(socios_dict, safe=False)
-def listar_autores(request):
-    autores = Autor.objects.all()
-    autores_dict = [
-		{
-			'id': autor.id,
-			'apellido': autor.apellido,
-			'nombre': autor.nombre,
-			'nacionalidad': autor.nacionalidad, 
-		}
-		for autor in autores
-	]
-    return JsonResponse(autores_dict, safe=False)
- """
-
+class EmpleadoViewSet(viewsets.ModelViewSet):
+	queryset = Empleado.objects.all()
+	serializer_class = EmpleadoGetSerializer

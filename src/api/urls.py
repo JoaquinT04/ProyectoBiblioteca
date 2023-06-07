@@ -1,13 +1,22 @@
-from django.urls import path
-from .views import listar_libros, detalle_libro, listar_socios, listar_autores
+from django.urls import path, include
+#from .views import listar_libros, detalle_libro
+""" urlpatterns = [
+	path('libros/<int:id>',detalle_libro,name = 'detalle_libro'),
+	path('libros', listar_libros, name='listar_libros'),
+] """
 
+# django rest framework
+from .views import LibroViewSet,EmpleadoViewSet
+from rest_framework import routers
 app_name = "api"
 
+router = routers.DefaultRouter()
+router.register('libro', LibroViewSet)
+router.register('empleado', EmpleadoViewSet)
+
 urlpatterns = [
-	path('libros/<int:id>',detalle_libro,name = 'detalle_libro'),
-    path('libros', listar_libros, name= 'listar_libros'),
-    path('socios', listar_socios, name='listar_socios'),
-    path('autores', listar_autores, name= 'listar_autores'),
+		path('',include(router.urls))
 ]
+
 
 

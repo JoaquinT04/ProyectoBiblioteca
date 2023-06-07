@@ -22,6 +22,8 @@ def nombreValidator(value):
 		raise ValidationError("Debe ingresar más de 3 caracteres")
 	
 def isbnValidator(value):
+	if not value == abs(value):
+		raise ValidationError("Debe ser un numero positivo")
 	value = str(value)
 	if not len(value)==13:
 		raise ValidationError("Debe tener 13 dígitos")

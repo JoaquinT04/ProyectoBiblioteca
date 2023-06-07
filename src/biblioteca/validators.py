@@ -29,16 +29,18 @@ def nombreValidator(value):
 
 def validar_libro_disponible(value):
 	prestamos = PrestamoLibro.objects.all()
-	print(prestamos)
 	prestamo_dict = [
 	    {
+			'id': libro.id,
             'titulo': str(libro.libro.titulo),
 	    	'activo': libro.activo    	
         }
         for libro in prestamos ]
     
 	for libro in prestamo_dict:
-		if libro["titulo"] == value.titulo and not libro["activo"] == False:
+		
+
+		if libro["titulo"] == value.titulo and not libro["activo"] == False and libro["id"] != value.pk:
 			raise ValidationError("El libro no esta disponible")
      
 

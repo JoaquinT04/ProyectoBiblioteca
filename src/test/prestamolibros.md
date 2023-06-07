@@ -13,15 +13,9 @@ Carga Exitosa
 
 <details><summary>Segunda Carga</summary>
 
-Segunda carga, intento realizar prestamo de un libro el cual ya estaba en prestamo...
+Segunda carga, se realizo con exito
 
 ![Imagen](assets/images/prestamoLibros/segundacarga.png)
-
- reintentando...  
-
- ![Imagen](assets/images/prestamoLibros/segundacarga2.png)  
-  
- Carga exitosa: Se corrigio agregando un validar en el campo del libro, con solo cambiar a un libro disponible se puede realizar la carga exitosa
 
 
 </details>

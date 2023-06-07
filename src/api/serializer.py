@@ -2,7 +2,7 @@ from rest_framework import serializers
 from libro.models import Libro
 from autor.models import Autor
 from empleado.models import Empleado
-
+from socio.models import Socio
 class AutorGetSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Autor
@@ -19,4 +19,9 @@ class LibroGetSerializer(serializers.ModelSerializer):
 class EmpleadoGetSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Empleado
-		fields = ('nombre','apellido','numero_legajo')
+		fields = ('id','nombre','apellido','numero_legajo')
+
+class SocioGetSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = Socio
+		fields = ('id','apellido','nombre','fecha_nacimiento')

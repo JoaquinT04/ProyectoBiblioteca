@@ -1,7 +1,6 @@
 from django.forms import ModelForm
 from .models import PrestamoLibro, Libro, Socio, Empleado
 from django import forms
-from .validators import validar_libro_disponible
 from django.utils import timezone
 from datetime import timedelta
 

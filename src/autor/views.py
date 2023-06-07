@@ -18,8 +18,9 @@ class EditarAutor(UpdateView):
     
 
 class ListarAutores(ListView):
-	model = Autor
-	template_name = "autores/listar.html"
+    model = Autor
+    template_name = "autores/listar.html"
+    ordering = ("-activo", "apellido", "nombre")
 
 def desactivar_autor(request, id):
     autor = get_object_or_404(Autor, id=id)

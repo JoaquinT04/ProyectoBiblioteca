@@ -6,8 +6,8 @@ from django.utils import timezone
 from datetime import timedelta
 
 class PrestamoLibroForm(ModelForm):
-	fecha_prestamos = forms.DateTimeField(disabled=True)
-	fecha_devolucion = forms.DateTimeField(disabled=True)
+	fecha_prestamos = forms.DateTimeField(disabled=False, initial=timezone.now)
+	fecha_devolucion = forms.DateTimeField(disabled=False, initial=timezone.now() + timedelta(days=2))
 	libro = forms.ModelChoiceField(queryset = Libro.objects.filter(activo = True),validators=[validar_libro_disponible])
 	socio = forms.ModelChoiceField(queryset = Socio.objects.filter(activo = True))
 	empleado = forms.ModelChoiceField(queryset = Empleado.objects.filter(activo = True))

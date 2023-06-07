@@ -2,6 +2,9 @@ from django.core.exceptions import ValidationError
 from .models import PrestamoLibro
 from libro.models import Libro
 
+
+
+
 def nombreValidator(value):
 	# value va a tener todo el string que se introdujo en el input
 	# voy a separar por cada espacio viendo si cada palabra tien o no 
@@ -30,14 +33,11 @@ def validar_libro_disponible(value):
 	prestamo_dict = [
 	    {
             'titulo': str(libro.libro.titulo),
-	    	'activo': libro.activo
-	    	
+	    	'activo': libro.activo    	
         }
         for libro in prestamos ]
     
 	for libro in prestamo_dict:
-		
-
 		if libro["titulo"] == value.titulo and not libro["activo"] == False:
 			raise ValidationError("El libro no esta disponible")
      

@@ -332,6 +332,7 @@ Formulario Alta o Modificacion
 - Pillow 9.5.0
 - sqlparse 0.4.4
 - tzdata 2023.3
+- djangorestframework 3.14.0
 
 ## Testing
 

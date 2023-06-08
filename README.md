@@ -216,25 +216,25 @@ HOME
 
 <details><summary>API</summary>
 
-![detalle](src/static/readme/noimage.png)
+![detalle](src/static/readme/apilibro.png)
 
 <p align="center">  
 Detalle Libro
 </p>
 
-![lista Libros](src/static/readme/noimage.png)
+![lista Libros](src/static/readme/apilistlibro.png)
 
 <p align="center">  
 Lista Libros
 </p>
 
-![Lista Socios](src/static/readme/noimage.png)
+![Lista Socios](src/static/readme/apilistsocio.png)
 
 <p align="center">  
 Lista Socios
 </p>
 
-![Lista Empleados](src/static/readme/noimage.png)
+![Lista Empleados](src/static/readme/apilistempleado.png)
 
 <p align="center">  
 Lista Empleados
@@ -244,13 +244,13 @@ Lista Empleados
 
 <details><summary>AUTOR</summary>
 
-![Lista](src/static/readme/noimage.png)
+![Lista](src/static/readme/autorlist.png)
 
 <p align="center">  
 Listado de Autores
 </p>
 
-![Form](src/static/readme/noimage.png)
+![Form](src/static/readme/autorform.png)
 
 <p align="center">  
 Formulario Alta o Modificacion
@@ -260,13 +260,13 @@ Formulario Alta o Modificacion
 
 <details><summary>BIBLIOTECA</summary>
 
-![Lista](src/static/readme/noimage.png)
+![Lista](src/static/readme/bibliotecalist.png)
 
 <p align="center">  
 Listado Prestamo de Libros
 </p>
 
-![Form](src/static/readme/noimage.png)
+![Form](src/static/readme/bibliotecaform.png)
 
 <p align="center">  
 Formulario Alta o Modificacion
@@ -276,13 +276,13 @@ Formulario Alta o Modificacion
 
 <details><summary>EMPLEADO</summary>
 
-![Lista](src/static/readme/noimage.png)
+![Lista](src/static/readme/empleadolist.png)
 
 <p align="center">  
 Listado de Empleados
 </p>
 
-![Form](src/static/readme/noimage.png)
+![Form](src/static/readme/empleadoform.png)
 
 <p align="center">  
 Formulario Alta o Modificacion
@@ -292,13 +292,13 @@ Formulario Alta o Modificacion
 
 <details><summary>LIBRO</summary>
 
-![Lista](src/static/readme/noimage.png)
+![Lista](src/static/readme/librolist.png)
 
 <p align="center">  
 Listado de Libros
 </p>
 
-![Form](src/static/readme/noimage.png)
+![Form](src/static/readme/libroform.png)
 
 <p align="center">  
 Formulario Alta o Modificacion
@@ -308,13 +308,13 @@ Formulario Alta o Modificacion
 
 <details><summary>SOCIO</summary>
 
-![Lista](src/static/readme/noimage.png)
+![Lista](src/static/readme/sociolist.png)
 
 <p align="center">  
 Listado de Socios
 </p>
 
-![Form](src/static/readme/noimage.png)
+![Form](src/static/readme/socioform.png)
 
 <p align="center">  
 Formulario Alta o Modificacion

@@ -1,0 +1,49 @@
+a {
+    text-decoration: none;
+}
+
+.fondo:hover {
+    background: #0d6efd;
+    color: white;
+}
+
+.icono {
+    width: 20px;
+}
+
+.iconos-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;  
+}
+
+.principal{
+    min-height: 90vh;
+    position: relative;
+    
+}
+
+.content{
+    padding-bottom: 60px;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    left: 0;
+    right: 0;
+}
+
+.control-ancho{
+    width: 50%;
+}
+
+@media(max-width: 992px) {
+    .control-ancho {
+        width: 100%;
+    }
+}
+
+

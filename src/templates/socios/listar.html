@@ -5,7 +5,7 @@
   <div class="text-center">
     <h3 class="title py-3">Lista de Socios</h3>
   </div>
-  <div class="table-responsive-sm">
+  <div class="table-responsive-lg">
     <table class="table table-hover align-middle">
       <thead>
         <tr class="bg-primary text-white">
@@ -19,7 +19,11 @@
       </thead>
       <tbody>     
       {% for socio in object_list %}
+        {% if socio.activo %}
         <tr class="table-info">
+        {% else %}
+        <tr class="table-danger">
+        {% endif %}
           <td>{{socio.apellido}}</td>
           <td>{{socio.nombre}}</td>
           <td>{{socio.fecha_nacimiento}}</td>
@@ -45,7 +49,7 @@
       </tbody>
     </table>
   </div>
-  <div class="container text-end">
+  <div class="container text-end pb-3">
     <a class="btn btn-primary" href= {% url 'socios:CrearSocio' %}>Agregar Socio</a>
   </div>
 </div>

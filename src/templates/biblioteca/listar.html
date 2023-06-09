@@ -27,7 +27,7 @@
   <div class="text-center">
     <h3 class="title py-3">Lista de Prestamos</h3>
   </div>
-  <div class="table-responsive-sm">
+  <div class="table-responsive-lg">
     <table class="table table-hover align-middle">
       <thead>
         <tr class="bg-primary text-white">
@@ -37,7 +37,6 @@
           <th scope="col">PRESTAMO</th>
           <th scope="col">DEVOLUCION</th>
           <th scope="col">EMPLEADO</th>
-          <th scope="col"></th>
           <th scope="col"></th>
           <th scope="col"></th>
           {% comment %} podemos agregar la columna detalle
@@ -69,7 +68,7 @@
     </table>
   </div>
 </div>
-<div class="container text-end">
+<div class="container text-end pb-3">
   <a class="btn btn-primary" href="{% url 'prestamolibros:CrearPrestamoLibro' %}">Agregar Prestamo</a>
 </div>
 {% endblock contenido %}

@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
-{% block titulo %}Home{% endblock titulo %}
+{% block titulo %}Inicio{% endblock titulo %}
 {% load static %}
 
 {% block contenido %}
 <div class="container p-5 d-flex bg-primary-subtle text-center">
-    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
-        <a class="link-underline-light" href="{% url 'empleados:ListarEmpleados' %}">
+    <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center">
+        <a class="tarjeta" href="{% url 'empleados:ListarEmpleados' %}">
             <div class="col">
-                <div class="card h-100" >
+                <div class="card fondo" >
                   <img src="{% static 'imagenes/empleado.jpg' %}" class="card-img-top" style="height:200px" alt="empleados">
                   <div class="card-body">
                     <h5 class="card-title">Empleados</h5>
@@ -15,9 +15,9 @@
                 </div>
             </div>
         </a>
-        <a class="link-underline-light" href="{% url 'socios:ListarSocios' %}">
+        <a class="tarjeta" href="{% url 'socios:ListarSocios' %}">
             <div class="col">
-                <div class="card h-100">
+                <div class="card fondo">
                   <img src="{% static 'imagenes/socios.jpg' %}" class="card-img-top" style="height:200px" alt="socios">
                   <div class="card-body">
                     <h5 class="card-title">Socios</h5>
@@ -25,9 +25,9 @@
                 </div>
             </div>
         </a>
-        <a class="link-underline-light" href="{% url 'autores:ListarAutores' %}">
+        <a class="tarjeta" href="{% url 'autores:ListarAutores' %}">
             <div class="col">
-                <div class="card h-100">
+                <div class="card fondo">
                   <img src="{% static 'imagenes/autores.png' %}" class="card-img-top" style="height:200px" alt="autores">
                   <div class="card-body">
                     <h5 class="card-title">Autores</h5>
@@ -35,9 +35,9 @@
                 </div>
             </div>
         </a>
-        <a class="link-underline-light" href="{% url 'libros:ListarLibros' %}">
+        <a class="tarjeta" href="{% url 'libros:ListarLibros' %}">
             <div class="col">
-                <div class="card h-100">
+                <div class="card fondo">
                     <img src="{% static 'imagenes/libros.jpg' %}" class="card-img-top" style="height:200px" alt="libros">
                     <div class="card-body">
                     <h5 class="card-title">Libros</h5>
@@ -45,9 +45,9 @@
                 </div>
             </div>
         </a>
-        <a class="link-underline-light" href="{% url 'prestamos:ListarPrestamosLibro' %}">
+        <a class="tarjeta" href="{% url 'prestamos:ListarPrestamosLibro' %}">
             <div class="col">
-                <div class="card h-100">
+                <div class="card fondo">
                 <img src="{% static 'imagenes/prestamos.jpg' %}" class="card-img-top" style="height:200px" alt="prestamos">
                 <div class="card-body">
                     <h5 class="card-title">Prestamos</h5>

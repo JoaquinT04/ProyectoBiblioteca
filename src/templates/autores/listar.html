@@ -19,7 +19,11 @@
             </thead>
             <tbody>
             {% for autor in object_list %}
+            {% if autor.activo %}
             <tr class="table-info">
+            {% else %}
+            <tr class="table-danger">
+            {% endif %}
                 <td>{{autor.apellido}}</td>
                 <td>{{autor.nombre}}</td>
                 <td>{{autor.nacionalidad}}</td>

@@ -23,7 +23,11 @@
         {% comment %} aqui empleados va a varirar dependiendo 
         de como me pasen las lista desde la views {% endcomment %}
       {% for empleado in object_list %}
+        {% if empleado.activo %}
         <tr class="table-info">
+        {% else %}
+        <tr class="table-danger">
+        {% endif %}
           <td>{{empleado.apellido}}</td>
           <td>{{empleado.nombre}}</td>
           <td>{{empleado.numero_legajo}}</td>

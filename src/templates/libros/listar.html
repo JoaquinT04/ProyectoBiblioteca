@@ -20,7 +20,11 @@
       </thead>
       <tbody>
       {% for libro in object_list %}
+        {% if libro.activo %}
         <tr class="table-info">
+        {% else %}
+        <tr class="table-danger">
+        {% endif %}
           <td>{{libro.titulo}}</td>
           <td>{{libro.descripcion}}</td>
           <td>{{libro.isbn}}</td>

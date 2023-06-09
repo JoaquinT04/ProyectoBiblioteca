@@ -19,7 +19,11 @@
       </thead>
       <tbody>     
       {% for socio in object_list %}
+        {% if socio.activo %}
         <tr class="table-info">
+        {% else %}
+        <tr class="table-danger">
+        {% endif %}
           <td>{{socio.apellido}}</td>
           <td>{{socio.nombre}}</td>
           <td>{{socio.fecha_nacimiento}}</td>

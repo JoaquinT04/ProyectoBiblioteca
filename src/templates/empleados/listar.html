@@ -5,7 +5,7 @@
   <div class="text-center">
     <h3 class="title py-3">Lista de Empleados</h3>
   </div>
-  <div class="table-responsive-sm">
+  <div class="table-responsive-lg">
     <table class="table table-hover align-middle">
       <thead>
         <tr class="bg-primary text-white">
@@ -23,7 +23,11 @@
         {% comment %} aqui empleados va a varirar dependiendo 
         de como me pasen las lista desde la views {% endcomment %}
       {% for empleado in object_list %}
+        {% if empleado.activo %}
         <tr class="table-info">
+        {% else %}
+        <tr class="table-danger">
+        {% endif %}
           <td>{{empleado.apellido}}</td>
           <td>{{empleado.nombre}}</td>
           <td>{{empleado.numero_legajo}}</td>
@@ -50,7 +54,7 @@
     </table>
   </div>
 </div>
-<div class="container text-end">
+<div class="container text-end pb-3">
   <a class="btn btn-primary" href= {% url 'empleados:CrearEmpleado' %}>Agregar Empleado</a>
 </div>
 {% endblock contenido %}

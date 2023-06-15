@@ -360,7 +360,7 @@ Formulario Alta o Modificacion
 - **Gabriel Alejandro Plaza**      
     - :octocat:[GitHub](https://github.com/GabrielP95/).
     - :e-mail: Mail: plazagabriel1995@gmail.com
-    - porfolio: https://gabrielp95.github.io/  
+    - [LinkedIn](https://www.linkedin.com/in/gabriel-plaza-developer/).
 - **Sergio Armando Salvatierra**     
     - :octocat:[GitHub](https://github.com/xalvlax/).
     - :e-mail: Mail: sergiosalvatierra86@gmail.com

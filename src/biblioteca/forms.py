@@ -1,8 +1,6 @@
 from django.forms import ModelForm
 from .models import PrestamoLibro, Libro, Socio, Empleado
 from django import forms
-from django.utils import timezone
-from datetime import timedelta
 
 class PrestamoLibroForm(ModelForm):
 	libro = forms.ModelChoiceField(queryset = Libro.objects.filter(activo = True))

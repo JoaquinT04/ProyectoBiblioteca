@@ -8,7 +8,7 @@
   <div class="table-responsive-lg">
     <table class="table table-hover align-middle">
       <thead>
-        <tr class="bg-primary text-white">
+        <tr class="color-primario color-texto">
           <th scope="col">TITULO</th>
           <th scope="col">DESCRIPCION</th>
           <th scope="col">ISBN</th>
@@ -21,9 +21,9 @@
       <tbody>
       {% for libro in object_list %}
         {% if libro.activo %}
-        <tr class="table-info">
+        <tr class="celda-activa texto-tabla">
         {% else %}
-        <tr class="table-danger">
+        <tr class="celda-inactiva texto-tabla">
         {% endif %}
           <td>{{libro.titulo}}</td>
           <td>{{libro.descripcion}}</td>
@@ -53,7 +53,7 @@
   </div>
 </div>
 <div class="container text-end pb-3">
-  <a class="btn btn-primary" href= {% url 'libros:CrearLibro' %}>Agregar Libro</a>
+  <a class="btn boton-primario" href= {% url 'libros:CrearLibro' %}>Agregar Libro</a>
 </div>
 {% endblock contenido %}
 

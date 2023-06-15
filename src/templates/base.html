@@ -7,21 +7,22 @@
     <title>Biblioteca | {% block titulo %}{% endblock titulo %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link tipe='text/css' href="{% static 'estilos/estilos.css' %}" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
   </head>
   
   <body class="principal">
 		{% comment %} navbar {% endcomment %}
-    <div class="container">
-      <nav class="navbar bg-primary navbar-expand-lg">
+    <div class="container-fluid">
+      <nav class="navbar color-primario navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand text-white" href="/home">Inicio</a>
+          <a class="navbar-brand color-texto" href="/home">Inicio</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle color-texto" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Personas
                 </a>
                 <ul class="dropdown-menu">
@@ -31,7 +32,7 @@
                 </ul>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle color-texto" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Libros
                 </a>
                 <ul class="dropdown-menu">
@@ -47,29 +48,29 @@
         </div>
       </nav>
     </div>
-    <div class="container content">
+    <div class="container-fluid content">
 		{% block contenido %}{% endblock contenido %}
     </div>
 		{% comment %} footer {% endcomment %}
-    <footer class="container footer">
-      <div class="container">
-        <div class="row p-2 bg-primary text-white">
+    <footer class="container-fluid footer">
+      <div class="container-fluid">
+        <div class="row p-2 color-primario color-texto">
           <p class="mb-2 pb-2 text-center border-bottom border-2">Creadores</p>
           <div class="col">
             <p class="text-center mb-0">López Ramiro</p>
             <div class="iconos-contenedor">
               <div>
-                <a class="text-white" href="mailto:ra31lopez@gmail.com">
+                <a class="color-texto" href="mailto:ra31lopez@gmail.com">
                   <img class="icono mx-2" src="{% static 'imagenes/iconomail.png' %}" alt="email"/>
                 </a>
               </div>
               <div>
-                <a class="text-white" target="_blank" href="https://www.linkedin.com/in/ramiro-lopez-17020026a/">
+                <a class="color-texto" target="_blank" href="https://www.linkedin.com/in/ramiro-lopez-17020026a/">
                   <img class="icono mx-2" src="{% static 'imagenes/iconolinkedin2.png' %}" alt="linkedin"/>
                 </a>
               </div>
               <div>
-                <a class="text-white" target="_blank" href="https://github.com/razier31/">
+                <a class="color-texto" target="_blank" href="https://github.com/razier31/">
                   <img class="icono mx-2" src="{% static 'imagenes/iconogithub.png' %}" alt="github"/>
                 </a>
               </div>
@@ -79,17 +80,17 @@
             <p class="text-center mb-0">Martinez Dante</p>
             <div class="iconos-contenedor">
               <div>
-                <a class="text-white" href="mailto:dantealbertomartinez@gmail.com">
+                <a class="color-texto" href="mailto:dantealbertomartinez@gmail.com">
                   <img class="icono mx-2" src="{% static 'imagenes/iconomail.png' %}" alt="email"/>
                 </a>
               </div>
               <div>
-                <a class="text-white" target="_blank" href="https://www.linkedin.com/in/dante-alberto-martinez-82b291262">
+                <a class="color-texto" target="_blank" href="https://www.linkedin.com/in/dante-alberto-martinez-82b291262">
                   <img class="icono mx-2" src="{% static 'imagenes/iconolinkedin2.png' %}" alt="linkedin"/>
                 </a>
               </div>
               <div>
-                <a class="text-white" target="_blank" href="https://github.com/errorcode106/">
+                <a class="color-texto" target="_blank" href="https://github.com/errorcode106/">
                   <img class="icono mx-2" src="{% static 'imagenes/iconogithub.png' %}" alt="github"/>
                 </a>
               </div>
@@ -99,17 +100,17 @@
             <p class="text-center mb-0">Plaza Gabriel</p>
             <div class="iconos-contenedor">
               <div>
-                <a class="text-white" href="mailto:plazagabriel1995@gmail.com">
-                  <img class="icono mx-2" src="{% static 'imagenes/iconomail.png' %}" alt="email"/>
-                </a>
-              </div>
-              <div>
-                <a class="text-white" target="_blank" href="https://gabrielp95.github.io/">
+                <a class="color-texto" target="_blank" href="https://gabrielp95.github.io/">
                   <img class="icono mx-2" src="{% static 'imagenes/iconoportfolio.png' %}" alt="portfolio"/>
                 </a>
               </div>
               <div>
-                <a class="text-white" target="_blank" href="https://github.com/GabrielP95/">
+                <a class="color-texto" target="_blank" href="https://www.linkedin.com/in/gabriel-plaza-developer">
+                  <img class="icono mx-2" src="{% static 'imagenes/iconolinkedin2.png' %}" alt="linkedin"/>
+                </a>
+              </div>
+              <div>
+                <a class="color-texto" target="_blank" href="https://github.com/GabrielP95/">
                   <img class="icono mx-2" src="{% static 'imagenes/iconogithub.png' %}" alt="github"/>
                 </a>
               </div>
@@ -119,17 +120,17 @@
             <p class="text-center mb-0">Salvatierra Sergio</p>
             <div class="iconos-contenedor">
               <div>
-                <a class="text-white" href="mailto:sergiosalvatierra86@gmail.com">
+                <a class="color-texto" href="mailto:sergiosalvatierra86@gmail.com">
                   <img class="icono mx-2" src="{% static 'imagenes/iconomail.png' %}" alt="email"/>
                 </a>
               </div>
               <div>
-                <a class="text-white" target="_blank" href="https://www.linkedin.com/in/sergio-a-salvatierra/">
+                <a class="color-texto" target="_blank" href="https://www.linkedin.com/in/sergio-a-salvatierra/">
                   <img class="icono mx-2" src="{% static 'imagenes/iconolinkedin2.png' %}" alt="linkedin"/>
                 </a>
               </div>
               <div>
-                <a class="text-white" target="_blank" href="https://github.com/xalvlax/">
+                <a class="color-texto" target="_blank" href="https://github.com/xalvlax/">
                   <img class="icono mx-2" src="{% static 'imagenes/iconogithub.png' %}" alt="github"/>
                 </a>
               </div>
@@ -139,17 +140,17 @@
             <p class="text-center mb-0">Tejerina Joaquín</p>
             <div class="iconos-contenedor">
               <div>
-                <a class="text-white" href="mailto:joaquintejerina19@hotmail.com">
+                <a class="color-texto" href="mailto:joaquintejerina19@hotmail.com">
                   <img class="icono mx-2" src="{% static 'imagenes/iconomail.png' %}" alt="email"/>
                 </a>
               </div>
               <div>
-                <a class="text-white"  target="_blank" href="https://www.linkedin.com/in/joaquin-tejerina/">
+                <a class="color-texto"  target="_blank" href="https://www.linkedin.com/in/joaquin-tejerina/">
                   <img class="icono mx-2" src="{% static 'imagenes/iconolinkedin2.png' %}" alt="linkedin"/>
                 </a>
               </div>
               <div>
-                <a class="text-white" target="_blank" href="https://github.com/JoaquinT04/">
+                <a class="color-texto" target="_blank" href="https://github.com/JoaquinT04/">
                   <img class="icono mx-2" src="{% static 'imagenes/iconogithub.png' %}" alt="github"/>
                 </a>
               </div>

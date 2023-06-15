@@ -14,7 +14,7 @@ class Empleado(models.Model):
         ordering = ["apellido","nombre","numero_legajo"]
     
     def __str__(self):
-        return f"{self.nombre},{self.apellido} (legajo n°: {self.numero_legajo})"
+        return f"{self.nombre},{self.apellido} ({self.numero_legajo})"
 
     def get_absolute_url(self):
         return reverse("empleados:ListarEmpleados")

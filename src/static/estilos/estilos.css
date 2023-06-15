@@ -1,8 +1,8 @@
 :root {
     /*COLOR PRIMARIO (navbar, footer, color hover cards, encabezados tablas, botones Agregar, Volver, Guardar*/
-    --color-primario:#0D6EFD ; /*rgb(99, 3, 78)*/
+    --color-primario:#087e8d ; /*rgb(99, 3, 78)*/
     /*COLOR SECUNDARIO (fondo inicio, fondo formularios*/
-    --color-secundario:#CFF4FC ; /* rgb(39, 235, 98)*/
+    --color-secundario:#e7f5a8 ; /* rgb(39, 235, 98)*/
     /*Color texto*/
     --color-texto: white;
     --color-texto-hover: white;

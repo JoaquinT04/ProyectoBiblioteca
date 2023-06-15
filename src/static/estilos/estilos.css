@@ -119,6 +119,9 @@ a {
     .principal{
         min-height: auto;
     }
+    .biblioteca{
+        display: none;
+    }
 
 }
 

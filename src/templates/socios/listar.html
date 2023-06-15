@@ -8,7 +8,7 @@
   <div class="table-responsive-lg">
     <table class="table table-hover align-middle">
       <thead>
-        <tr class="bg-primary text-white">
+        <tr class="color-primario color-texto">
           <th scope="col">APELLIDO</th>
           <th scope="col">NOMBRE</th>
           <th scope="col">FECHA DE NACIMIENTO</th>
@@ -20,9 +20,9 @@
       <tbody>     
       {% for socio in object_list %}
         {% if socio.activo %}
-        <tr class="table-info">
+        <tr class="celda-activa texto-tabla">
         {% else %}
-        <tr class="table-danger">
+        <tr class="celda-inactiva texto-tabla">
         {% endif %}
           <td>{{socio.apellido}}</td>
           <td>{{socio.nombre}}</td>
@@ -50,7 +50,7 @@
     </table>
   </div>
   <div class="container text-end pb-3">
-    <a class="btn btn-primary" href= {% url 'socios:CrearSocio' %}>Agregar Socio</a>
+    <a class="btn boton-primario" href= {% url 'socios:CrearSocio' %}>Agregar Socio</a>
   </div>
 </div>
 

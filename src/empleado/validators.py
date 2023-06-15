@@ -20,3 +20,7 @@ def nombreValidator(value):
 			# [0-9] o algun caracter especial como['#','.','-','á','é','í','ó','ú',etc] 
 	else:	
 		raise ValidationError("Debe ingresar más de 3 caracteres")
+	
+def positiveValidator(value):
+	if not value == abs(value):
+		raise ValidationError("Debe ser un numero positivo")

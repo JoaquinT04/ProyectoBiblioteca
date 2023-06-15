@@ -8,7 +8,7 @@
   <div class="table-responsive-lg">
     <table class="table table-hover align-middle">
       <thead>
-        <tr class="bg-primary text-white">
+        <tr class="color-primario color-texto">
           <th scope="col">APELLIDO</th>
           <th scope="col">NOMBRE</th>
           <th scope="col">LEGAJO</th>
@@ -24,9 +24,9 @@
         de como me pasen las lista desde la views {% endcomment %}
       {% for empleado in object_list %}
         {% if empleado.activo %}
-        <tr class="table-info">
+        <tr class="celda-activa texto-tabla">
         {% else %}
-        <tr class="table-danger">
+        <tr class="celda-inactiva texto-tabla">
         {% endif %}
           <td>{{empleado.apellido}}</td>
           <td>{{empleado.nombre}}</td>
@@ -54,7 +54,7 @@
     </table>
   </div>
 </div>
-<div class="container text-end pb-3">
-  <a class="btn btn-primary" href= {% url 'empleados:CrearEmpleado' %}>Agregar Empleado</a>
+<div class="container text-end p-3">
+  <a class="btn boton-primario" href= {% url 'empleados:CrearEmpleado' %}>Agregar Empleado</a>
 </div>
 {% endblock contenido %}

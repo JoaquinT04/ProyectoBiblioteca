@@ -30,7 +30,7 @@
   <div class="table-responsive-lg">
     <table class="table table-hover align-middle">
       <thead>
-        <tr class="bg-primary text-white">
+        <tr class="color-primario color-texto">
           <th scope="col">ID</th>
           <th scope="col">LIBRO</th>
           <th scope="col">SOCIO</th>
@@ -48,7 +48,7 @@
         de como me pasen las lista desde la views {% endcomment %}
       {% for prestamo in object_list %}
         {% if prestamo.activo %}
-        <tr class="table-info">
+        <tr class="celda-activa texto-tabla">
           <td>{{prestamo.pk}}</td>
           <td>{{prestamo.libro}}</td>
           <td>{{prestamo.socio}}</td>
@@ -69,6 +69,6 @@
   </div>
 </div>
 <div class="container text-end pb-3">
-  <a class="btn btn-primary" href="{% url 'prestamolibros:CrearPrestamoLibro' %}">Agregar Prestamo</a>
+  <a class="btn boton-primario" href="{% url 'prestamolibros:CrearPrestamoLibro' %}">Agregar Prestamo</a>
 </div>
 {% endblock contenido %}

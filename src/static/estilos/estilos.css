@@ -1,14 +1,14 @@
 :root {
     /*COLOR PRIMARIO (navbar, footer, color hover cards, encabezados tablas, botones Agregar, Volver, Guardar*/
-    --color-primario:#0D6EFD ; /*rgb(99, 3, 78)*/
+    --color-primario: rgb(32, 32, 32) ; 
     /*COLOR SECUNDARIO (fondo inicio, fondo formularios*/
-    --color-secundario:#CFF4FC ; /* rgb(39, 235, 98)*/
+    --color-secundario: rgb(156, 23, 50) ; 
     /*Color texto*/
     --color-texto: white;
     --color-texto-hover: white;
     /*COLORES TABLA LISTA*/
-    --color-fondo-celda-activa: #CFF4FC;
-    --color-fondo-celda-inactiva: #f8d7da;
+    --color-fondo-celda-activa: rgb(46,187,230);
+    --color-fondo-celda-inactiva: rgb(150, 148, 144);
     --color-texto-tabla: black;
     /*Color del hover de los botones Agregar, Volver, Guardar)*/
     --color-boton-hover: rgb(10, 106, 109); /*grey*/
@@ -123,6 +123,14 @@ a {
         display: none;
     }
 
+}
+
+.fijar{
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 
